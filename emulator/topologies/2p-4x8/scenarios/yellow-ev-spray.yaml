@@ -1,0 +1,30 @@
+# yellow-ev-spray.yaml — full EV fan-out test for yellow tenant (2p-4x8)
+#
+# Policy: ev_spray (rotates BOTH plane and spine per packet)
+# EVs used: 8 (2 planes × 4 spines)
+# MRC enabled: no (pure data-path test)
+#
+# Yellow counterpart to green-ev-spray. Yellow's outer SID list has an
+# extra hop (host-side decap), so this validates that the extra segment
+# survives per-packet rotation.
+#
+# Run:
+#   make TOPO=2p-4x8 scenario SCEN=yellow-ev-spray
+name: yellow-ev-spray
+description: |
+  Yellow tenant EV-spray over 4 spines × 2 planes (8 EVs per pair).
+  Validates that yellow's extra leaf→host hop survives per-packet
+  outer-SID rotation on the 2p-4x8 topology.
+
+paths_per_plane: 4
+
+flows:
+  - pairs: yellow-pairs
+    policy: ev_spray
+    rate: 500pps
+    duration: 5s
+
+faults: []
+
+report:
+  out: results/yellow-ev-spray.json

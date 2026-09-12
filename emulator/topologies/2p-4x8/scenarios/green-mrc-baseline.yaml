@@ -1,0 +1,31 @@
+# green-mrc-baseline.yaml — clean fabric, health_aware_mrc spray (2p-4x8)
+#
+# Reference point for MRC scenarios. Both planes are healthy, so the EV
+# state machine should hold every plane in GOOD and the spray weights
+# should converge on uniform — i.e. behave like round_robin. Confirms
+# that turning MRC on does not by itself perturb the wire.
+#
+# Compare against green-baseline: per-plane counts should be within a
+# few percent, loss should be ~0, reorder should match baseline.
+#
+# Run:
+#   make TOPO=2p-4x8 scenario SCEN=green-mrc-baseline
+name: green-mrc-baseline
+description: |
+  Both planes healthy, health_aware_mrc spray over 4 green leaf pairs
+  on the 2p-4x8 topology. Probes and loss reports are exchanged but
+  should not influence the weights — sanity check that enabling MRC
+  is a no-op on a clean fabric.
+
+flows:
+  - pairs: green-pairs
+    policy: health_aware_mrc
+    rate: 500pps
+    duration: 5s
+
+faults: []
+
+mrc: {}
+
+report:
+  out: results/green-mrc-baseline.json

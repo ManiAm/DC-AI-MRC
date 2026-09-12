@@ -1,0 +1,2796 @@
+name: sonic-docker-4p-8x16
+prefix: ""
+
+mgmt:
+  network: mgt
+  ipv4-subnet: 172.20.18.0/24
+
+topology:
+  nodes:
+
+    p0-spine00:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.10
+
+    p0-spine01:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.11
+
+    p0-spine02:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.12
+
+    p0-spine03:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.13
+
+    p0-spine04:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.14
+
+    p0-spine05:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.15
+
+    p0-spine06:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.16
+
+    p0-spine07:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.17
+
+    p1-spine00:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.18
+
+    p1-spine01:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.19
+
+    p1-spine02:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.20
+
+    p1-spine03:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.21
+
+    p1-spine04:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.22
+
+    p1-spine05:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.23
+
+    p1-spine06:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.24
+
+    p1-spine07:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.25
+
+    p2-spine00:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.26
+
+    p2-spine01:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.27
+
+    p2-spine02:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.28
+
+    p2-spine03:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.29
+
+    p2-spine04:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.30
+
+    p2-spine05:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.31
+
+    p2-spine06:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.32
+
+    p2-spine07:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.33
+
+    p3-spine00:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.34
+
+    p3-spine01:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.35
+
+    p3-spine02:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.36
+
+    p3-spine03:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.37
+
+    p3-spine04:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.38
+
+    p3-spine05:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.39
+
+    p3-spine06:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.40
+
+    p3-spine07:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.41
+
+    p0-leaf00:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.50
+
+    p0-leaf01:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.51
+
+    p0-leaf02:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.52
+
+    p0-leaf03:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.53
+
+    p0-leaf04:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.54
+
+    p0-leaf05:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.55
+
+    p0-leaf06:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.56
+
+    p0-leaf07:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.57
+
+    p0-leaf08:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.58
+
+    p0-leaf09:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.59
+
+    p0-leaf10:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.60
+
+    p0-leaf11:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.61
+
+    p0-leaf12:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.62
+
+    p0-leaf13:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.63
+
+    p0-leaf14:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.64
+
+    p0-leaf15:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.65
+
+    p1-leaf00:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.66
+
+    p1-leaf01:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.67
+
+    p1-leaf02:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.68
+
+    p1-leaf03:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.69
+
+    p1-leaf04:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.70
+
+    p1-leaf05:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.71
+
+    p1-leaf06:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.72
+
+    p1-leaf07:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.73
+
+    p1-leaf08:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.74
+
+    p1-leaf09:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.75
+
+    p1-leaf10:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.76
+
+    p1-leaf11:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.77
+
+    p1-leaf12:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.78
+
+    p1-leaf13:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.79
+
+    p1-leaf14:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.80
+
+    p1-leaf15:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.81
+
+    p2-leaf00:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.82
+
+    p2-leaf01:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.83
+
+    p2-leaf02:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.84
+
+    p2-leaf03:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.85
+
+    p2-leaf04:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.86
+
+    p2-leaf05:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.87
+
+    p2-leaf06:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.88
+
+    p2-leaf07:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.89
+
+    p2-leaf08:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.90
+
+    p2-leaf09:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.91
+
+    p2-leaf10:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.92
+
+    p2-leaf11:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.93
+
+    p2-leaf12:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.94
+
+    p2-leaf13:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.95
+
+    p2-leaf14:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.96
+
+    p2-leaf15:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.97
+
+    p3-leaf00:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.98
+
+    p3-leaf01:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.99
+
+    p3-leaf02:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.100
+
+    p3-leaf03:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.101
+
+    p3-leaf04:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.102
+
+    p3-leaf05:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.103
+
+    p3-leaf06:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.104
+
+    p3-leaf07:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.105
+
+    p3-leaf08:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.106
+
+    p3-leaf09:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.107
+
+    p3-leaf10:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.108
+
+    p3-leaf11:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.109
+
+    p3-leaf12:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.110
+
+    p3-leaf13:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.111
+
+    p3-leaf14:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.112
+
+    p3-leaf15:
+      kind: linux
+      image: docker-sonic-vs:latest
+      mgmt-ipv4: 172.20.18.113
+
+    green-host00:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.200
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:bbbb:00::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:00::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:00::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:00::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:bbbb:00::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:bbbb:00::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:bbbb:00::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:bbbb:00::1 dev eth4"
+        - "ip -6 route add 2001:db8:bbbb::/48 via 2001:db8:bbbb:00::1 dev eth1"
+
+    green-host01:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.201
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:bbbb:01::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:01::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:01::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:01::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:1::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:bbbb:01::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:bbbb:01::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:bbbb:01::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:bbbb:01::1 dev eth4"
+        - "ip -6 route add 2001:db8:bbbb::/48 via 2001:db8:bbbb:01::1 dev eth1"
+
+    green-host02:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.202
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:bbbb:02::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:02::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:02::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:02::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:2::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:bbbb:02::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:bbbb:02::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:bbbb:02::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:bbbb:02::1 dev eth4"
+        - "ip -6 route add 2001:db8:bbbb::/48 via 2001:db8:bbbb:02::1 dev eth1"
+
+    green-host03:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.203
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:bbbb:03::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:03::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:03::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:03::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:3::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:bbbb:03::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:bbbb:03::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:bbbb:03::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:bbbb:03::1 dev eth4"
+        - "ip -6 route add 2001:db8:bbbb::/48 via 2001:db8:bbbb:03::1 dev eth1"
+
+    green-host04:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.204
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:bbbb:04::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:04::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:04::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:04::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:4::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:bbbb:04::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:bbbb:04::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:bbbb:04::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:bbbb:04::1 dev eth4"
+        - "ip -6 route add 2001:db8:bbbb::/48 via 2001:db8:bbbb:04::1 dev eth1"
+
+    green-host05:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.205
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:bbbb:05::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:05::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:05::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:05::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:5::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:bbbb:05::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:bbbb:05::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:bbbb:05::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:bbbb:05::1 dev eth4"
+        - "ip -6 route add 2001:db8:bbbb::/48 via 2001:db8:bbbb:05::1 dev eth1"
+
+    green-host06:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.206
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:bbbb:06::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:06::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:06::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:06::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:6::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:bbbb:06::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:bbbb:06::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:bbbb:06::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:bbbb:06::1 dev eth4"
+        - "ip -6 route add 2001:db8:bbbb::/48 via 2001:db8:bbbb:06::1 dev eth1"
+
+    green-host07:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.207
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:bbbb:07::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:07::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:07::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:07::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:7::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:bbbb:07::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:bbbb:07::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:bbbb:07::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:bbbb:07::1 dev eth4"
+        - "ip -6 route add 2001:db8:bbbb::/48 via 2001:db8:bbbb:07::1 dev eth1"
+
+    green-host08:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.208
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:bbbb:08::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:08::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:08::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:08::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:8::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:bbbb:08::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:bbbb:08::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:bbbb:08::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:bbbb:08::1 dev eth4"
+        - "ip -6 route add 2001:db8:bbbb::/48 via 2001:db8:bbbb:08::1 dev eth1"
+
+    green-host09:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.209
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:bbbb:09::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:09::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:09::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:09::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:9::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:bbbb:09::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:bbbb:09::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:bbbb:09::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:bbbb:09::1 dev eth4"
+        - "ip -6 route add 2001:db8:bbbb::/48 via 2001:db8:bbbb:09::1 dev eth1"
+
+    green-host10:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.210
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:bbbb:0a::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0a::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0a::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0a::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:a::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:bbbb:0a::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:bbbb:0a::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:bbbb:0a::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:bbbb:0a::1 dev eth4"
+        - "ip -6 route add 2001:db8:bbbb::/48 via 2001:db8:bbbb:0a::1 dev eth1"
+
+    green-host11:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.211
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:bbbb:0b::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0b::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0b::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0b::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:b::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:bbbb:0b::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:bbbb:0b::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:bbbb:0b::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:bbbb:0b::1 dev eth4"
+        - "ip -6 route add 2001:db8:bbbb::/48 via 2001:db8:bbbb:0b::1 dev eth1"
+
+    green-host12:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.212
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:bbbb:0c::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0c::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0c::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0c::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:c::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:bbbb:0c::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:bbbb:0c::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:bbbb:0c::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:bbbb:0c::1 dev eth4"
+        - "ip -6 route add 2001:db8:bbbb::/48 via 2001:db8:bbbb:0c::1 dev eth1"
+
+    green-host13:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.213
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:bbbb:0d::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0d::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0d::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0d::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:d::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:bbbb:0d::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:bbbb:0d::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:bbbb:0d::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:bbbb:0d::1 dev eth4"
+        - "ip -6 route add 2001:db8:bbbb::/48 via 2001:db8:bbbb:0d::1 dev eth1"
+
+    green-host14:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.214
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:bbbb:0e::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0e::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0e::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0e::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:e::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:bbbb:0e::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:bbbb:0e::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:bbbb:0e::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:bbbb:0e::1 dev eth4"
+        - "ip -6 route add 2001:db8:bbbb::/48 via 2001:db8:bbbb:0e::1 dev eth1"
+
+    green-host15:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.215
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:bbbb:0f::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0f::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0f::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:0f::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:bbbb:f::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:bbbb:0f::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:bbbb:0f::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:bbbb:0f::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:bbbb:0f::1 dev eth4"
+        - "ip -6 route add 2001:db8:bbbb::/48 via 2001:db8:bbbb:0f::1 dev eth1"
+
+    yellow-host00:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.216
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:cccc:00::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:00::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:00::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:00::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:00::2/128 dev lo nodad"
+        - "sysctl -w net.ipv6.conf.all.forwarding=1"
+        - "ip -6 addr add 2001:db8:cccc:0::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:cccc:00::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:cccc:00::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:cccc:00::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:cccc:00::1 dev eth4"
+        - "ip -6 route add 2001:db8:cccc::/48 via 2001:db8:cccc:00::1 dev eth1"
+        - "ip -6 route add fc00:0000:d001::/48 dev eth1 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0001:d001::/48 dev eth2 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0002:d001::/48 dev eth3 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0003:d001::/48 dev eth4 encap seg6local action End.DT6 table 0"
+
+    yellow-host01:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.217
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:cccc:01::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:01::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:01::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:01::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:01::2/128 dev lo nodad"
+        - "sysctl -w net.ipv6.conf.all.forwarding=1"
+        - "ip -6 addr add 2001:db8:cccc:1::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:1::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:cccc:01::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:cccc:01::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:cccc:01::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:cccc:01::1 dev eth4"
+        - "ip -6 route add 2001:db8:cccc::/48 via 2001:db8:cccc:01::1 dev eth1"
+        - "ip -6 route add fc00:0000:d001::/48 dev eth1 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0001:d001::/48 dev eth2 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0002:d001::/48 dev eth3 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0003:d001::/48 dev eth4 encap seg6local action End.DT6 table 0"
+
+    yellow-host02:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.218
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:cccc:02::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:02::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:02::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:02::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:02::2/128 dev lo nodad"
+        - "sysctl -w net.ipv6.conf.all.forwarding=1"
+        - "ip -6 addr add 2001:db8:cccc:2::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:2::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:cccc:02::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:cccc:02::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:cccc:02::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:cccc:02::1 dev eth4"
+        - "ip -6 route add 2001:db8:cccc::/48 via 2001:db8:cccc:02::1 dev eth1"
+        - "ip -6 route add fc00:0000:d001::/48 dev eth1 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0001:d001::/48 dev eth2 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0002:d001::/48 dev eth3 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0003:d001::/48 dev eth4 encap seg6local action End.DT6 table 0"
+
+    yellow-host03:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.219
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:cccc:03::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:03::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:03::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:03::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:03::2/128 dev lo nodad"
+        - "sysctl -w net.ipv6.conf.all.forwarding=1"
+        - "ip -6 addr add 2001:db8:cccc:3::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:3::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:cccc:03::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:cccc:03::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:cccc:03::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:cccc:03::1 dev eth4"
+        - "ip -6 route add 2001:db8:cccc::/48 via 2001:db8:cccc:03::1 dev eth1"
+        - "ip -6 route add fc00:0000:d001::/48 dev eth1 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0001:d001::/48 dev eth2 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0002:d001::/48 dev eth3 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0003:d001::/48 dev eth4 encap seg6local action End.DT6 table 0"
+
+    yellow-host04:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.220
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:cccc:04::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:04::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:04::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:04::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:04::2/128 dev lo nodad"
+        - "sysctl -w net.ipv6.conf.all.forwarding=1"
+        - "ip -6 addr add 2001:db8:cccc:4::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:4::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:cccc:04::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:cccc:04::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:cccc:04::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:cccc:04::1 dev eth4"
+        - "ip -6 route add 2001:db8:cccc::/48 via 2001:db8:cccc:04::1 dev eth1"
+        - "ip -6 route add fc00:0000:d001::/48 dev eth1 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0001:d001::/48 dev eth2 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0002:d001::/48 dev eth3 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0003:d001::/48 dev eth4 encap seg6local action End.DT6 table 0"
+
+    yellow-host05:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.221
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:cccc:05::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:05::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:05::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:05::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:05::2/128 dev lo nodad"
+        - "sysctl -w net.ipv6.conf.all.forwarding=1"
+        - "ip -6 addr add 2001:db8:cccc:5::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:5::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:cccc:05::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:cccc:05::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:cccc:05::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:cccc:05::1 dev eth4"
+        - "ip -6 route add 2001:db8:cccc::/48 via 2001:db8:cccc:05::1 dev eth1"
+        - "ip -6 route add fc00:0000:d001::/48 dev eth1 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0001:d001::/48 dev eth2 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0002:d001::/48 dev eth3 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0003:d001::/48 dev eth4 encap seg6local action End.DT6 table 0"
+
+    yellow-host06:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.222
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:cccc:06::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:06::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:06::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:06::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:06::2/128 dev lo nodad"
+        - "sysctl -w net.ipv6.conf.all.forwarding=1"
+        - "ip -6 addr add 2001:db8:cccc:6::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:6::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:cccc:06::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:cccc:06::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:cccc:06::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:cccc:06::1 dev eth4"
+        - "ip -6 route add 2001:db8:cccc::/48 via 2001:db8:cccc:06::1 dev eth1"
+        - "ip -6 route add fc00:0000:d001::/48 dev eth1 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0001:d001::/48 dev eth2 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0002:d001::/48 dev eth3 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0003:d001::/48 dev eth4 encap seg6local action End.DT6 table 0"
+
+    yellow-host07:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.223
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:cccc:07::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:07::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:07::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:07::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:07::2/128 dev lo nodad"
+        - "sysctl -w net.ipv6.conf.all.forwarding=1"
+        - "ip -6 addr add 2001:db8:cccc:7::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:7::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:cccc:07::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:cccc:07::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:cccc:07::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:cccc:07::1 dev eth4"
+        - "ip -6 route add 2001:db8:cccc::/48 via 2001:db8:cccc:07::1 dev eth1"
+        - "ip -6 route add fc00:0000:d001::/48 dev eth1 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0001:d001::/48 dev eth2 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0002:d001::/48 dev eth3 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0003:d001::/48 dev eth4 encap seg6local action End.DT6 table 0"
+
+    yellow-host08:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.224
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:cccc:08::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:08::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:08::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:08::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:08::2/128 dev lo nodad"
+        - "sysctl -w net.ipv6.conf.all.forwarding=1"
+        - "ip -6 addr add 2001:db8:cccc:8::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:8::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:cccc:08::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:cccc:08::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:cccc:08::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:cccc:08::1 dev eth4"
+        - "ip -6 route add 2001:db8:cccc::/48 via 2001:db8:cccc:08::1 dev eth1"
+        - "ip -6 route add fc00:0000:d001::/48 dev eth1 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0001:d001::/48 dev eth2 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0002:d001::/48 dev eth3 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0003:d001::/48 dev eth4 encap seg6local action End.DT6 table 0"
+
+    yellow-host09:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.225
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:cccc:09::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:09::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:09::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:09::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:09::2/128 dev lo nodad"
+        - "sysctl -w net.ipv6.conf.all.forwarding=1"
+        - "ip -6 addr add 2001:db8:cccc:9::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:9::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:cccc:09::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:cccc:09::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:cccc:09::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:cccc:09::1 dev eth4"
+        - "ip -6 route add 2001:db8:cccc::/48 via 2001:db8:cccc:09::1 dev eth1"
+        - "ip -6 route add fc00:0000:d001::/48 dev eth1 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0001:d001::/48 dev eth2 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0002:d001::/48 dev eth3 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0003:d001::/48 dev eth4 encap seg6local action End.DT6 table 0"
+
+    yellow-host10:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.226
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:cccc:0a::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0a::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0a::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0a::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0a::2/128 dev lo nodad"
+        - "sysctl -w net.ipv6.conf.all.forwarding=1"
+        - "ip -6 addr add 2001:db8:cccc:a::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:a::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:cccc:0a::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:cccc:0a::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:cccc:0a::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:cccc:0a::1 dev eth4"
+        - "ip -6 route add 2001:db8:cccc::/48 via 2001:db8:cccc:0a::1 dev eth1"
+        - "ip -6 route add fc00:0000:d001::/48 dev eth1 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0001:d001::/48 dev eth2 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0002:d001::/48 dev eth3 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0003:d001::/48 dev eth4 encap seg6local action End.DT6 table 0"
+
+    yellow-host11:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.227
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:cccc:0b::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0b::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0b::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0b::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0b::2/128 dev lo nodad"
+        - "sysctl -w net.ipv6.conf.all.forwarding=1"
+        - "ip -6 addr add 2001:db8:cccc:b::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:b::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:cccc:0b::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:cccc:0b::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:cccc:0b::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:cccc:0b::1 dev eth4"
+        - "ip -6 route add 2001:db8:cccc::/48 via 2001:db8:cccc:0b::1 dev eth1"
+        - "ip -6 route add fc00:0000:d001::/48 dev eth1 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0001:d001::/48 dev eth2 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0002:d001::/48 dev eth3 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0003:d001::/48 dev eth4 encap seg6local action End.DT6 table 0"
+
+    yellow-host12:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.228
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:cccc:0c::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0c::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0c::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0c::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0c::2/128 dev lo nodad"
+        - "sysctl -w net.ipv6.conf.all.forwarding=1"
+        - "ip -6 addr add 2001:db8:cccc:c::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:c::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:cccc:0c::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:cccc:0c::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:cccc:0c::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:cccc:0c::1 dev eth4"
+        - "ip -6 route add 2001:db8:cccc::/48 via 2001:db8:cccc:0c::1 dev eth1"
+        - "ip -6 route add fc00:0000:d001::/48 dev eth1 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0001:d001::/48 dev eth2 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0002:d001::/48 dev eth3 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0003:d001::/48 dev eth4 encap seg6local action End.DT6 table 0"
+
+    yellow-host13:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.229
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:cccc:0d::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0d::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0d::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0d::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0d::2/128 dev lo nodad"
+        - "sysctl -w net.ipv6.conf.all.forwarding=1"
+        - "ip -6 addr add 2001:db8:cccc:d::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:d::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:cccc:0d::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:cccc:0d::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:cccc:0d::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:cccc:0d::1 dev eth4"
+        - "ip -6 route add 2001:db8:cccc::/48 via 2001:db8:cccc:0d::1 dev eth1"
+        - "ip -6 route add fc00:0000:d001::/48 dev eth1 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0001:d001::/48 dev eth2 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0002:d001::/48 dev eth3 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0003:d001::/48 dev eth4 encap seg6local action End.DT6 table 0"
+
+    yellow-host14:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.230
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:cccc:0e::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0e::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0e::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0e::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0e::2/128 dev lo nodad"
+        - "sysctl -w net.ipv6.conf.all.forwarding=1"
+        - "ip -6 addr add 2001:db8:cccc:e::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:e::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:cccc:0e::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:cccc:0e::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:cccc:0e::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:cccc:0e::1 dev eth4"
+        - "ip -6 route add 2001:db8:cccc::/48 via 2001:db8:cccc:0e::1 dev eth1"
+        - "ip -6 route add fc00:0000:d001::/48 dev eth1 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0001:d001::/48 dev eth2 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0002:d001::/48 dev eth3 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0003:d001::/48 dev eth4 encap seg6local action End.DT6 table 0"
+
+    yellow-host15:
+      kind: linux
+      image: alpine-srv6-scapy:1.0
+      mgmt-ipv4: 172.20.18.231
+      binds:
+        - topo.yaml:/etc/srv6_mrc/topo.yaml:ro
+      exec:
+        - "ip -6 addr add 2001:db8:cccc:0f::2/64 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0f::2/64 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0f::2/64 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0f::2/64 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:0f::2/128 dev lo nodad"
+        - "sysctl -w net.ipv6.conf.all.forwarding=1"
+        - "ip -6 addr add 2001:db8:cccc:f::10/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::11/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::12/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::13/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::14/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::15/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::16/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::17/128 dev eth1 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::20/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::21/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::22/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::23/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::24/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::25/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::26/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::27/128 dev eth2 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::30/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::31/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::32/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::33/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::34/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::35/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::36/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::37/128 dev eth3 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::40/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::41/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::42/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::43/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::44/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::45/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::46/128 dev eth4 nodad"
+        - "ip -6 addr add 2001:db8:cccc:f::47/128 dev eth4 nodad"
+        - "ip -6 route add fc00:0000::/32 via 2001:db8:cccc:0f::1 dev eth1"
+        - "ip -6 route add fc00:0001::/32 via 2001:db8:cccc:0f::1 dev eth2"
+        - "ip -6 route add fc00:0002::/32 via 2001:db8:cccc:0f::1 dev eth3"
+        - "ip -6 route add fc00:0003::/32 via 2001:db8:cccc:0f::1 dev eth4"
+        - "ip -6 route add 2001:db8:cccc::/48 via 2001:db8:cccc:0f::1 dev eth1"
+        - "ip -6 route add fc00:0000:d001::/48 dev eth1 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0001:d001::/48 dev eth2 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0002:d001::/48 dev eth3 encap seg6local action End.DT6 table 0"
+        - "ip -6 route add fc00:0003:d001::/48 dev eth4 encap seg6local action End.DT6 table 0"
+
+  links:
+
+    - endpoints: ["p0-leaf00:eth1", "p0-spine00:eth1"]
+    - endpoints: ["p0-leaf01:eth1", "p0-spine00:eth2"]
+    - endpoints: ["p0-leaf02:eth1", "p0-spine00:eth3"]
+    - endpoints: ["p0-leaf03:eth1", "p0-spine00:eth4"]
+    - endpoints: ["p0-leaf04:eth1", "p0-spine00:eth5"]
+    - endpoints: ["p0-leaf05:eth1", "p0-spine00:eth6"]
+    - endpoints: ["p0-leaf06:eth1", "p0-spine00:eth7"]
+    - endpoints: ["p0-leaf07:eth1", "p0-spine00:eth8"]
+    - endpoints: ["p0-leaf08:eth1", "p0-spine00:eth9"]
+    - endpoints: ["p0-leaf09:eth1", "p0-spine00:eth10"]
+    - endpoints: ["p0-leaf10:eth1", "p0-spine00:eth11"]
+    - endpoints: ["p0-leaf11:eth1", "p0-spine00:eth12"]
+    - endpoints: ["p0-leaf12:eth1", "p0-spine00:eth13"]
+    - endpoints: ["p0-leaf13:eth1", "p0-spine00:eth14"]
+    - endpoints: ["p0-leaf14:eth1", "p0-spine00:eth15"]
+    - endpoints: ["p0-leaf15:eth1", "p0-spine00:eth16"]
+    - endpoints: ["p0-leaf00:eth2", "p0-spine01:eth1"]
+    - endpoints: ["p0-leaf01:eth2", "p0-spine01:eth2"]
+    - endpoints: ["p0-leaf02:eth2", "p0-spine01:eth3"]
+    - endpoints: ["p0-leaf03:eth2", "p0-spine01:eth4"]
+    - endpoints: ["p0-leaf04:eth2", "p0-spine01:eth5"]
+    - endpoints: ["p0-leaf05:eth2", "p0-spine01:eth6"]
+    - endpoints: ["p0-leaf06:eth2", "p0-spine01:eth7"]
+    - endpoints: ["p0-leaf07:eth2", "p0-spine01:eth8"]
+    - endpoints: ["p0-leaf08:eth2", "p0-spine01:eth9"]
+    - endpoints: ["p0-leaf09:eth2", "p0-spine01:eth10"]
+    - endpoints: ["p0-leaf10:eth2", "p0-spine01:eth11"]
+    - endpoints: ["p0-leaf11:eth2", "p0-spine01:eth12"]
+    - endpoints: ["p0-leaf12:eth2", "p0-spine01:eth13"]
+    - endpoints: ["p0-leaf13:eth2", "p0-spine01:eth14"]
+    - endpoints: ["p0-leaf14:eth2", "p0-spine01:eth15"]
+    - endpoints: ["p0-leaf15:eth2", "p0-spine01:eth16"]
+    - endpoints: ["p0-leaf00:eth3", "p0-spine02:eth1"]
+    - endpoints: ["p0-leaf01:eth3", "p0-spine02:eth2"]
+    - endpoints: ["p0-leaf02:eth3", "p0-spine02:eth3"]
+    - endpoints: ["p0-leaf03:eth3", "p0-spine02:eth4"]
+    - endpoints: ["p0-leaf04:eth3", "p0-spine02:eth5"]
+    - endpoints: ["p0-leaf05:eth3", "p0-spine02:eth6"]
+    - endpoints: ["p0-leaf06:eth3", "p0-spine02:eth7"]
+    - endpoints: ["p0-leaf07:eth3", "p0-spine02:eth8"]
+    - endpoints: ["p0-leaf08:eth3", "p0-spine02:eth9"]
+    - endpoints: ["p0-leaf09:eth3", "p0-spine02:eth10"]
+    - endpoints: ["p0-leaf10:eth3", "p0-spine02:eth11"]
+    - endpoints: ["p0-leaf11:eth3", "p0-spine02:eth12"]
+    - endpoints: ["p0-leaf12:eth3", "p0-spine02:eth13"]
+    - endpoints: ["p0-leaf13:eth3", "p0-spine02:eth14"]
+    - endpoints: ["p0-leaf14:eth3", "p0-spine02:eth15"]
+    - endpoints: ["p0-leaf15:eth3", "p0-spine02:eth16"]
+    - endpoints: ["p0-leaf00:eth4", "p0-spine03:eth1"]
+    - endpoints: ["p0-leaf01:eth4", "p0-spine03:eth2"]
+    - endpoints: ["p0-leaf02:eth4", "p0-spine03:eth3"]
+    - endpoints: ["p0-leaf03:eth4", "p0-spine03:eth4"]
+    - endpoints: ["p0-leaf04:eth4", "p0-spine03:eth5"]
+    - endpoints: ["p0-leaf05:eth4", "p0-spine03:eth6"]
+    - endpoints: ["p0-leaf06:eth4", "p0-spine03:eth7"]
+    - endpoints: ["p0-leaf07:eth4", "p0-spine03:eth8"]
+    - endpoints: ["p0-leaf08:eth4", "p0-spine03:eth9"]
+    - endpoints: ["p0-leaf09:eth4", "p0-spine03:eth10"]
+    - endpoints: ["p0-leaf10:eth4", "p0-spine03:eth11"]
+    - endpoints: ["p0-leaf11:eth4", "p0-spine03:eth12"]
+    - endpoints: ["p0-leaf12:eth4", "p0-spine03:eth13"]
+    - endpoints: ["p0-leaf13:eth4", "p0-spine03:eth14"]
+    - endpoints: ["p0-leaf14:eth4", "p0-spine03:eth15"]
+    - endpoints: ["p0-leaf15:eth4", "p0-spine03:eth16"]
+    - endpoints: ["p0-leaf00:eth5", "p0-spine04:eth1"]
+    - endpoints: ["p0-leaf01:eth5", "p0-spine04:eth2"]
+    - endpoints: ["p0-leaf02:eth5", "p0-spine04:eth3"]
+    - endpoints: ["p0-leaf03:eth5", "p0-spine04:eth4"]
+    - endpoints: ["p0-leaf04:eth5", "p0-spine04:eth5"]
+    - endpoints: ["p0-leaf05:eth5", "p0-spine04:eth6"]
+    - endpoints: ["p0-leaf06:eth5", "p0-spine04:eth7"]
+    - endpoints: ["p0-leaf07:eth5", "p0-spine04:eth8"]
+    - endpoints: ["p0-leaf08:eth5", "p0-spine04:eth9"]
+    - endpoints: ["p0-leaf09:eth5", "p0-spine04:eth10"]
+    - endpoints: ["p0-leaf10:eth5", "p0-spine04:eth11"]
+    - endpoints: ["p0-leaf11:eth5", "p0-spine04:eth12"]
+    - endpoints: ["p0-leaf12:eth5", "p0-spine04:eth13"]
+    - endpoints: ["p0-leaf13:eth5", "p0-spine04:eth14"]
+    - endpoints: ["p0-leaf14:eth5", "p0-spine04:eth15"]
+    - endpoints: ["p0-leaf15:eth5", "p0-spine04:eth16"]
+    - endpoints: ["p0-leaf00:eth6", "p0-spine05:eth1"]
+    - endpoints: ["p0-leaf01:eth6", "p0-spine05:eth2"]
+    - endpoints: ["p0-leaf02:eth6", "p0-spine05:eth3"]
+    - endpoints: ["p0-leaf03:eth6", "p0-spine05:eth4"]
+    - endpoints: ["p0-leaf04:eth6", "p0-spine05:eth5"]
+    - endpoints: ["p0-leaf05:eth6", "p0-spine05:eth6"]
+    - endpoints: ["p0-leaf06:eth6", "p0-spine05:eth7"]
+    - endpoints: ["p0-leaf07:eth6", "p0-spine05:eth8"]
+    - endpoints: ["p0-leaf08:eth6", "p0-spine05:eth9"]
+    - endpoints: ["p0-leaf09:eth6", "p0-spine05:eth10"]
+    - endpoints: ["p0-leaf10:eth6", "p0-spine05:eth11"]
+    - endpoints: ["p0-leaf11:eth6", "p0-spine05:eth12"]
+    - endpoints: ["p0-leaf12:eth6", "p0-spine05:eth13"]
+    - endpoints: ["p0-leaf13:eth6", "p0-spine05:eth14"]
+    - endpoints: ["p0-leaf14:eth6", "p0-spine05:eth15"]
+    - endpoints: ["p0-leaf15:eth6", "p0-spine05:eth16"]
+    - endpoints: ["p0-leaf00:eth7", "p0-spine06:eth1"]
+    - endpoints: ["p0-leaf01:eth7", "p0-spine06:eth2"]
+    - endpoints: ["p0-leaf02:eth7", "p0-spine06:eth3"]
+    - endpoints: ["p0-leaf03:eth7", "p0-spine06:eth4"]
+    - endpoints: ["p0-leaf04:eth7", "p0-spine06:eth5"]
+    - endpoints: ["p0-leaf05:eth7", "p0-spine06:eth6"]
+    - endpoints: ["p0-leaf06:eth7", "p0-spine06:eth7"]
+    - endpoints: ["p0-leaf07:eth7", "p0-spine06:eth8"]
+    - endpoints: ["p0-leaf08:eth7", "p0-spine06:eth9"]
+    - endpoints: ["p0-leaf09:eth7", "p0-spine06:eth10"]
+    - endpoints: ["p0-leaf10:eth7", "p0-spine06:eth11"]
+    - endpoints: ["p0-leaf11:eth7", "p0-spine06:eth12"]
+    - endpoints: ["p0-leaf12:eth7", "p0-spine06:eth13"]
+    - endpoints: ["p0-leaf13:eth7", "p0-spine06:eth14"]
+    - endpoints: ["p0-leaf14:eth7", "p0-spine06:eth15"]
+    - endpoints: ["p0-leaf15:eth7", "p0-spine06:eth16"]
+    - endpoints: ["p0-leaf00:eth8", "p0-spine07:eth1"]
+    - endpoints: ["p0-leaf01:eth8", "p0-spine07:eth2"]
+    - endpoints: ["p0-leaf02:eth8", "p0-spine07:eth3"]
+    - endpoints: ["p0-leaf03:eth8", "p0-spine07:eth4"]
+    - endpoints: ["p0-leaf04:eth8", "p0-spine07:eth5"]
+    - endpoints: ["p0-leaf05:eth8", "p0-spine07:eth6"]
+    - endpoints: ["p0-leaf06:eth8", "p0-spine07:eth7"]
+    - endpoints: ["p0-leaf07:eth8", "p0-spine07:eth8"]
+    - endpoints: ["p0-leaf08:eth8", "p0-spine07:eth9"]
+    - endpoints: ["p0-leaf09:eth8", "p0-spine07:eth10"]
+    - endpoints: ["p0-leaf10:eth8", "p0-spine07:eth11"]
+    - endpoints: ["p0-leaf11:eth8", "p0-spine07:eth12"]
+    - endpoints: ["p0-leaf12:eth8", "p0-spine07:eth13"]
+    - endpoints: ["p0-leaf13:eth8", "p0-spine07:eth14"]
+    - endpoints: ["p0-leaf14:eth8", "p0-spine07:eth15"]
+    - endpoints: ["p0-leaf15:eth8", "p0-spine07:eth16"]
+    - endpoints: ["p1-leaf00:eth1", "p1-spine00:eth1"]
+    - endpoints: ["p1-leaf01:eth1", "p1-spine00:eth2"]
+    - endpoints: ["p1-leaf02:eth1", "p1-spine00:eth3"]
+    - endpoints: ["p1-leaf03:eth1", "p1-spine00:eth4"]
+    - endpoints: ["p1-leaf04:eth1", "p1-spine00:eth5"]
+    - endpoints: ["p1-leaf05:eth1", "p1-spine00:eth6"]
+    - endpoints: ["p1-leaf06:eth1", "p1-spine00:eth7"]
+    - endpoints: ["p1-leaf07:eth1", "p1-spine00:eth8"]
+    - endpoints: ["p1-leaf08:eth1", "p1-spine00:eth9"]
+    - endpoints: ["p1-leaf09:eth1", "p1-spine00:eth10"]
+    - endpoints: ["p1-leaf10:eth1", "p1-spine00:eth11"]
+    - endpoints: ["p1-leaf11:eth1", "p1-spine00:eth12"]
+    - endpoints: ["p1-leaf12:eth1", "p1-spine00:eth13"]
+    - endpoints: ["p1-leaf13:eth1", "p1-spine00:eth14"]
+    - endpoints: ["p1-leaf14:eth1", "p1-spine00:eth15"]
+    - endpoints: ["p1-leaf15:eth1", "p1-spine00:eth16"]
+    - endpoints: ["p1-leaf00:eth2", "p1-spine01:eth1"]
+    - endpoints: ["p1-leaf01:eth2", "p1-spine01:eth2"]
+    - endpoints: ["p1-leaf02:eth2", "p1-spine01:eth3"]
+    - endpoints: ["p1-leaf03:eth2", "p1-spine01:eth4"]
+    - endpoints: ["p1-leaf04:eth2", "p1-spine01:eth5"]
+    - endpoints: ["p1-leaf05:eth2", "p1-spine01:eth6"]
+    - endpoints: ["p1-leaf06:eth2", "p1-spine01:eth7"]
+    - endpoints: ["p1-leaf07:eth2", "p1-spine01:eth8"]
+    - endpoints: ["p1-leaf08:eth2", "p1-spine01:eth9"]
+    - endpoints: ["p1-leaf09:eth2", "p1-spine01:eth10"]
+    - endpoints: ["p1-leaf10:eth2", "p1-spine01:eth11"]
+    - endpoints: ["p1-leaf11:eth2", "p1-spine01:eth12"]
+    - endpoints: ["p1-leaf12:eth2", "p1-spine01:eth13"]
+    - endpoints: ["p1-leaf13:eth2", "p1-spine01:eth14"]
+    - endpoints: ["p1-leaf14:eth2", "p1-spine01:eth15"]
+    - endpoints: ["p1-leaf15:eth2", "p1-spine01:eth16"]
+    - endpoints: ["p1-leaf00:eth3", "p1-spine02:eth1"]
+    - endpoints: ["p1-leaf01:eth3", "p1-spine02:eth2"]
+    - endpoints: ["p1-leaf02:eth3", "p1-spine02:eth3"]
+    - endpoints: ["p1-leaf03:eth3", "p1-spine02:eth4"]
+    - endpoints: ["p1-leaf04:eth3", "p1-spine02:eth5"]
+    - endpoints: ["p1-leaf05:eth3", "p1-spine02:eth6"]
+    - endpoints: ["p1-leaf06:eth3", "p1-spine02:eth7"]
+    - endpoints: ["p1-leaf07:eth3", "p1-spine02:eth8"]
+    - endpoints: ["p1-leaf08:eth3", "p1-spine02:eth9"]
+    - endpoints: ["p1-leaf09:eth3", "p1-spine02:eth10"]
+    - endpoints: ["p1-leaf10:eth3", "p1-spine02:eth11"]
+    - endpoints: ["p1-leaf11:eth3", "p1-spine02:eth12"]
+    - endpoints: ["p1-leaf12:eth3", "p1-spine02:eth13"]
+    - endpoints: ["p1-leaf13:eth3", "p1-spine02:eth14"]
+    - endpoints: ["p1-leaf14:eth3", "p1-spine02:eth15"]
+    - endpoints: ["p1-leaf15:eth3", "p1-spine02:eth16"]
+    - endpoints: ["p1-leaf00:eth4", "p1-spine03:eth1"]
+    - endpoints: ["p1-leaf01:eth4", "p1-spine03:eth2"]
+    - endpoints: ["p1-leaf02:eth4", "p1-spine03:eth3"]
+    - endpoints: ["p1-leaf03:eth4", "p1-spine03:eth4"]
+    - endpoints: ["p1-leaf04:eth4", "p1-spine03:eth5"]
+    - endpoints: ["p1-leaf05:eth4", "p1-spine03:eth6"]
+    - endpoints: ["p1-leaf06:eth4", "p1-spine03:eth7"]
+    - endpoints: ["p1-leaf07:eth4", "p1-spine03:eth8"]
+    - endpoints: ["p1-leaf08:eth4", "p1-spine03:eth9"]
+    - endpoints: ["p1-leaf09:eth4", "p1-spine03:eth10"]
+    - endpoints: ["p1-leaf10:eth4", "p1-spine03:eth11"]
+    - endpoints: ["p1-leaf11:eth4", "p1-spine03:eth12"]
+    - endpoints: ["p1-leaf12:eth4", "p1-spine03:eth13"]
+    - endpoints: ["p1-leaf13:eth4", "p1-spine03:eth14"]
+    - endpoints: ["p1-leaf14:eth4", "p1-spine03:eth15"]
+    - endpoints: ["p1-leaf15:eth4", "p1-spine03:eth16"]
+    - endpoints: ["p1-leaf00:eth5", "p1-spine04:eth1"]
+    - endpoints: ["p1-leaf01:eth5", "p1-spine04:eth2"]
+    - endpoints: ["p1-leaf02:eth5", "p1-spine04:eth3"]
+    - endpoints: ["p1-leaf03:eth5", "p1-spine04:eth4"]
+    - endpoints: ["p1-leaf04:eth5", "p1-spine04:eth5"]
+    - endpoints: ["p1-leaf05:eth5", "p1-spine04:eth6"]
+    - endpoints: ["p1-leaf06:eth5", "p1-spine04:eth7"]
+    - endpoints: ["p1-leaf07:eth5", "p1-spine04:eth8"]
+    - endpoints: ["p1-leaf08:eth5", "p1-spine04:eth9"]
+    - endpoints: ["p1-leaf09:eth5", "p1-spine04:eth10"]
+    - endpoints: ["p1-leaf10:eth5", "p1-spine04:eth11"]
+    - endpoints: ["p1-leaf11:eth5", "p1-spine04:eth12"]
+    - endpoints: ["p1-leaf12:eth5", "p1-spine04:eth13"]
+    - endpoints: ["p1-leaf13:eth5", "p1-spine04:eth14"]
+    - endpoints: ["p1-leaf14:eth5", "p1-spine04:eth15"]
+    - endpoints: ["p1-leaf15:eth5", "p1-spine04:eth16"]
+    - endpoints: ["p1-leaf00:eth6", "p1-spine05:eth1"]
+    - endpoints: ["p1-leaf01:eth6", "p1-spine05:eth2"]
+    - endpoints: ["p1-leaf02:eth6", "p1-spine05:eth3"]
+    - endpoints: ["p1-leaf03:eth6", "p1-spine05:eth4"]
+    - endpoints: ["p1-leaf04:eth6", "p1-spine05:eth5"]
+    - endpoints: ["p1-leaf05:eth6", "p1-spine05:eth6"]
+    - endpoints: ["p1-leaf06:eth6", "p1-spine05:eth7"]
+    - endpoints: ["p1-leaf07:eth6", "p1-spine05:eth8"]
+    - endpoints: ["p1-leaf08:eth6", "p1-spine05:eth9"]
+    - endpoints: ["p1-leaf09:eth6", "p1-spine05:eth10"]
+    - endpoints: ["p1-leaf10:eth6", "p1-spine05:eth11"]
+    - endpoints: ["p1-leaf11:eth6", "p1-spine05:eth12"]
+    - endpoints: ["p1-leaf12:eth6", "p1-spine05:eth13"]
+    - endpoints: ["p1-leaf13:eth6", "p1-spine05:eth14"]
+    - endpoints: ["p1-leaf14:eth6", "p1-spine05:eth15"]
+    - endpoints: ["p1-leaf15:eth6", "p1-spine05:eth16"]
+    - endpoints: ["p1-leaf00:eth7", "p1-spine06:eth1"]
+    - endpoints: ["p1-leaf01:eth7", "p1-spine06:eth2"]
+    - endpoints: ["p1-leaf02:eth7", "p1-spine06:eth3"]
+    - endpoints: ["p1-leaf03:eth7", "p1-spine06:eth4"]
+    - endpoints: ["p1-leaf04:eth7", "p1-spine06:eth5"]
+    - endpoints: ["p1-leaf05:eth7", "p1-spine06:eth6"]
+    - endpoints: ["p1-leaf06:eth7", "p1-spine06:eth7"]
+    - endpoints: ["p1-leaf07:eth7", "p1-spine06:eth8"]
+    - endpoints: ["p1-leaf08:eth7", "p1-spine06:eth9"]
+    - endpoints: ["p1-leaf09:eth7", "p1-spine06:eth10"]
+    - endpoints: ["p1-leaf10:eth7", "p1-spine06:eth11"]
+    - endpoints: ["p1-leaf11:eth7", "p1-spine06:eth12"]
+    - endpoints: ["p1-leaf12:eth7", "p1-spine06:eth13"]
+    - endpoints: ["p1-leaf13:eth7", "p1-spine06:eth14"]
+    - endpoints: ["p1-leaf14:eth7", "p1-spine06:eth15"]
+    - endpoints: ["p1-leaf15:eth7", "p1-spine06:eth16"]
+    - endpoints: ["p1-leaf00:eth8", "p1-spine07:eth1"]
+    - endpoints: ["p1-leaf01:eth8", "p1-spine07:eth2"]
+    - endpoints: ["p1-leaf02:eth8", "p1-spine07:eth3"]
+    - endpoints: ["p1-leaf03:eth8", "p1-spine07:eth4"]
+    - endpoints: ["p1-leaf04:eth8", "p1-spine07:eth5"]
+    - endpoints: ["p1-leaf05:eth8", "p1-spine07:eth6"]
+    - endpoints: ["p1-leaf06:eth8", "p1-spine07:eth7"]
+    - endpoints: ["p1-leaf07:eth8", "p1-spine07:eth8"]
+    - endpoints: ["p1-leaf08:eth8", "p1-spine07:eth9"]
+    - endpoints: ["p1-leaf09:eth8", "p1-spine07:eth10"]
+    - endpoints: ["p1-leaf10:eth8", "p1-spine07:eth11"]
+    - endpoints: ["p1-leaf11:eth8", "p1-spine07:eth12"]
+    - endpoints: ["p1-leaf12:eth8", "p1-spine07:eth13"]
+    - endpoints: ["p1-leaf13:eth8", "p1-spine07:eth14"]
+    - endpoints: ["p1-leaf14:eth8", "p1-spine07:eth15"]
+    - endpoints: ["p1-leaf15:eth8", "p1-spine07:eth16"]
+    - endpoints: ["p2-leaf00:eth1", "p2-spine00:eth1"]
+    - endpoints: ["p2-leaf01:eth1", "p2-spine00:eth2"]
+    - endpoints: ["p2-leaf02:eth1", "p2-spine00:eth3"]
+    - endpoints: ["p2-leaf03:eth1", "p2-spine00:eth4"]
+    - endpoints: ["p2-leaf04:eth1", "p2-spine00:eth5"]
+    - endpoints: ["p2-leaf05:eth1", "p2-spine00:eth6"]
+    - endpoints: ["p2-leaf06:eth1", "p2-spine00:eth7"]
+    - endpoints: ["p2-leaf07:eth1", "p2-spine00:eth8"]
+    - endpoints: ["p2-leaf08:eth1", "p2-spine00:eth9"]
+    - endpoints: ["p2-leaf09:eth1", "p2-spine00:eth10"]
+    - endpoints: ["p2-leaf10:eth1", "p2-spine00:eth11"]
+    - endpoints: ["p2-leaf11:eth1", "p2-spine00:eth12"]
+    - endpoints: ["p2-leaf12:eth1", "p2-spine00:eth13"]
+    - endpoints: ["p2-leaf13:eth1", "p2-spine00:eth14"]
+    - endpoints: ["p2-leaf14:eth1", "p2-spine00:eth15"]
+    - endpoints: ["p2-leaf15:eth1", "p2-spine00:eth16"]
+    - endpoints: ["p2-leaf00:eth2", "p2-spine01:eth1"]
+    - endpoints: ["p2-leaf01:eth2", "p2-spine01:eth2"]
+    - endpoints: ["p2-leaf02:eth2", "p2-spine01:eth3"]
+    - endpoints: ["p2-leaf03:eth2", "p2-spine01:eth4"]
+    - endpoints: ["p2-leaf04:eth2", "p2-spine01:eth5"]
+    - endpoints: ["p2-leaf05:eth2", "p2-spine01:eth6"]
+    - endpoints: ["p2-leaf06:eth2", "p2-spine01:eth7"]
+    - endpoints: ["p2-leaf07:eth2", "p2-spine01:eth8"]
+    - endpoints: ["p2-leaf08:eth2", "p2-spine01:eth9"]
+    - endpoints: ["p2-leaf09:eth2", "p2-spine01:eth10"]
+    - endpoints: ["p2-leaf10:eth2", "p2-spine01:eth11"]
+    - endpoints: ["p2-leaf11:eth2", "p2-spine01:eth12"]
+    - endpoints: ["p2-leaf12:eth2", "p2-spine01:eth13"]
+    - endpoints: ["p2-leaf13:eth2", "p2-spine01:eth14"]
+    - endpoints: ["p2-leaf14:eth2", "p2-spine01:eth15"]
+    - endpoints: ["p2-leaf15:eth2", "p2-spine01:eth16"]
+    - endpoints: ["p2-leaf00:eth3", "p2-spine02:eth1"]
+    - endpoints: ["p2-leaf01:eth3", "p2-spine02:eth2"]
+    - endpoints: ["p2-leaf02:eth3", "p2-spine02:eth3"]
+    - endpoints: ["p2-leaf03:eth3", "p2-spine02:eth4"]
+    - endpoints: ["p2-leaf04:eth3", "p2-spine02:eth5"]
+    - endpoints: ["p2-leaf05:eth3", "p2-spine02:eth6"]
+    - endpoints: ["p2-leaf06:eth3", "p2-spine02:eth7"]
+    - endpoints: ["p2-leaf07:eth3", "p2-spine02:eth8"]
+    - endpoints: ["p2-leaf08:eth3", "p2-spine02:eth9"]
+    - endpoints: ["p2-leaf09:eth3", "p2-spine02:eth10"]
+    - endpoints: ["p2-leaf10:eth3", "p2-spine02:eth11"]
+    - endpoints: ["p2-leaf11:eth3", "p2-spine02:eth12"]
+    - endpoints: ["p2-leaf12:eth3", "p2-spine02:eth13"]
+    - endpoints: ["p2-leaf13:eth3", "p2-spine02:eth14"]
+    - endpoints: ["p2-leaf14:eth3", "p2-spine02:eth15"]
+    - endpoints: ["p2-leaf15:eth3", "p2-spine02:eth16"]
+    - endpoints: ["p2-leaf00:eth4", "p2-spine03:eth1"]
+    - endpoints: ["p2-leaf01:eth4", "p2-spine03:eth2"]
+    - endpoints: ["p2-leaf02:eth4", "p2-spine03:eth3"]
+    - endpoints: ["p2-leaf03:eth4", "p2-spine03:eth4"]
+    - endpoints: ["p2-leaf04:eth4", "p2-spine03:eth5"]
+    - endpoints: ["p2-leaf05:eth4", "p2-spine03:eth6"]
+    - endpoints: ["p2-leaf06:eth4", "p2-spine03:eth7"]
+    - endpoints: ["p2-leaf07:eth4", "p2-spine03:eth8"]
+    - endpoints: ["p2-leaf08:eth4", "p2-spine03:eth9"]
+    - endpoints: ["p2-leaf09:eth4", "p2-spine03:eth10"]
+    - endpoints: ["p2-leaf10:eth4", "p2-spine03:eth11"]
+    - endpoints: ["p2-leaf11:eth4", "p2-spine03:eth12"]
+    - endpoints: ["p2-leaf12:eth4", "p2-spine03:eth13"]
+    - endpoints: ["p2-leaf13:eth4", "p2-spine03:eth14"]
+    - endpoints: ["p2-leaf14:eth4", "p2-spine03:eth15"]
+    - endpoints: ["p2-leaf15:eth4", "p2-spine03:eth16"]
+    - endpoints: ["p2-leaf00:eth5", "p2-spine04:eth1"]
+    - endpoints: ["p2-leaf01:eth5", "p2-spine04:eth2"]
+    - endpoints: ["p2-leaf02:eth5", "p2-spine04:eth3"]
+    - endpoints: ["p2-leaf03:eth5", "p2-spine04:eth4"]
+    - endpoints: ["p2-leaf04:eth5", "p2-spine04:eth5"]
+    - endpoints: ["p2-leaf05:eth5", "p2-spine04:eth6"]
+    - endpoints: ["p2-leaf06:eth5", "p2-spine04:eth7"]
+    - endpoints: ["p2-leaf07:eth5", "p2-spine04:eth8"]
+    - endpoints: ["p2-leaf08:eth5", "p2-spine04:eth9"]
+    - endpoints: ["p2-leaf09:eth5", "p2-spine04:eth10"]
+    - endpoints: ["p2-leaf10:eth5", "p2-spine04:eth11"]
+    - endpoints: ["p2-leaf11:eth5", "p2-spine04:eth12"]
+    - endpoints: ["p2-leaf12:eth5", "p2-spine04:eth13"]
+    - endpoints: ["p2-leaf13:eth5", "p2-spine04:eth14"]
+    - endpoints: ["p2-leaf14:eth5", "p2-spine04:eth15"]
+    - endpoints: ["p2-leaf15:eth5", "p2-spine04:eth16"]
+    - endpoints: ["p2-leaf00:eth6", "p2-spine05:eth1"]
+    - endpoints: ["p2-leaf01:eth6", "p2-spine05:eth2"]
+    - endpoints: ["p2-leaf02:eth6", "p2-spine05:eth3"]
+    - endpoints: ["p2-leaf03:eth6", "p2-spine05:eth4"]
+    - endpoints: ["p2-leaf04:eth6", "p2-spine05:eth5"]
+    - endpoints: ["p2-leaf05:eth6", "p2-spine05:eth6"]
+    - endpoints: ["p2-leaf06:eth6", "p2-spine05:eth7"]
+    - endpoints: ["p2-leaf07:eth6", "p2-spine05:eth8"]
+    - endpoints: ["p2-leaf08:eth6", "p2-spine05:eth9"]
+    - endpoints: ["p2-leaf09:eth6", "p2-spine05:eth10"]
+    - endpoints: ["p2-leaf10:eth6", "p2-spine05:eth11"]
+    - endpoints: ["p2-leaf11:eth6", "p2-spine05:eth12"]
+    - endpoints: ["p2-leaf12:eth6", "p2-spine05:eth13"]
+    - endpoints: ["p2-leaf13:eth6", "p2-spine05:eth14"]
+    - endpoints: ["p2-leaf14:eth6", "p2-spine05:eth15"]
+    - endpoints: ["p2-leaf15:eth6", "p2-spine05:eth16"]
+    - endpoints: ["p2-leaf00:eth7", "p2-spine06:eth1"]
+    - endpoints: ["p2-leaf01:eth7", "p2-spine06:eth2"]
+    - endpoints: ["p2-leaf02:eth7", "p2-spine06:eth3"]
+    - endpoints: ["p2-leaf03:eth7", "p2-spine06:eth4"]
+    - endpoints: ["p2-leaf04:eth7", "p2-spine06:eth5"]
+    - endpoints: ["p2-leaf05:eth7", "p2-spine06:eth6"]
+    - endpoints: ["p2-leaf06:eth7", "p2-spine06:eth7"]
+    - endpoints: ["p2-leaf07:eth7", "p2-spine06:eth8"]
+    - endpoints: ["p2-leaf08:eth7", "p2-spine06:eth9"]
+    - endpoints: ["p2-leaf09:eth7", "p2-spine06:eth10"]
+    - endpoints: ["p2-leaf10:eth7", "p2-spine06:eth11"]
+    - endpoints: ["p2-leaf11:eth7", "p2-spine06:eth12"]
+    - endpoints: ["p2-leaf12:eth7", "p2-spine06:eth13"]
+    - endpoints: ["p2-leaf13:eth7", "p2-spine06:eth14"]
+    - endpoints: ["p2-leaf14:eth7", "p2-spine06:eth15"]
+    - endpoints: ["p2-leaf15:eth7", "p2-spine06:eth16"]
+    - endpoints: ["p2-leaf00:eth8", "p2-spine07:eth1"]
+    - endpoints: ["p2-leaf01:eth8", "p2-spine07:eth2"]
+    - endpoints: ["p2-leaf02:eth8", "p2-spine07:eth3"]
+    - endpoints: ["p2-leaf03:eth8", "p2-spine07:eth4"]
+    - endpoints: ["p2-leaf04:eth8", "p2-spine07:eth5"]
+    - endpoints: ["p2-leaf05:eth8", "p2-spine07:eth6"]
+    - endpoints: ["p2-leaf06:eth8", "p2-spine07:eth7"]
+    - endpoints: ["p2-leaf07:eth8", "p2-spine07:eth8"]
+    - endpoints: ["p2-leaf08:eth8", "p2-spine07:eth9"]
+    - endpoints: ["p2-leaf09:eth8", "p2-spine07:eth10"]
+    - endpoints: ["p2-leaf10:eth8", "p2-spine07:eth11"]
+    - endpoints: ["p2-leaf11:eth8", "p2-spine07:eth12"]
+    - endpoints: ["p2-leaf12:eth8", "p2-spine07:eth13"]
+    - endpoints: ["p2-leaf13:eth8", "p2-spine07:eth14"]
+    - endpoints: ["p2-leaf14:eth8", "p2-spine07:eth15"]
+    - endpoints: ["p2-leaf15:eth8", "p2-spine07:eth16"]
+    - endpoints: ["p3-leaf00:eth1", "p3-spine00:eth1"]
+    - endpoints: ["p3-leaf01:eth1", "p3-spine00:eth2"]
+    - endpoints: ["p3-leaf02:eth1", "p3-spine00:eth3"]
+    - endpoints: ["p3-leaf03:eth1", "p3-spine00:eth4"]
+    - endpoints: ["p3-leaf04:eth1", "p3-spine00:eth5"]
+    - endpoints: ["p3-leaf05:eth1", "p3-spine00:eth6"]
+    - endpoints: ["p3-leaf06:eth1", "p3-spine00:eth7"]
+    - endpoints: ["p3-leaf07:eth1", "p3-spine00:eth8"]
+    - endpoints: ["p3-leaf08:eth1", "p3-spine00:eth9"]
+    - endpoints: ["p3-leaf09:eth1", "p3-spine00:eth10"]
+    - endpoints: ["p3-leaf10:eth1", "p3-spine00:eth11"]
+    - endpoints: ["p3-leaf11:eth1", "p3-spine00:eth12"]
+    - endpoints: ["p3-leaf12:eth1", "p3-spine00:eth13"]
+    - endpoints: ["p3-leaf13:eth1", "p3-spine00:eth14"]
+    - endpoints: ["p3-leaf14:eth1", "p3-spine00:eth15"]
+    - endpoints: ["p3-leaf15:eth1", "p3-spine00:eth16"]
+    - endpoints: ["p3-leaf00:eth2", "p3-spine01:eth1"]
+    - endpoints: ["p3-leaf01:eth2", "p3-spine01:eth2"]
+    - endpoints: ["p3-leaf02:eth2", "p3-spine01:eth3"]
+    - endpoints: ["p3-leaf03:eth2", "p3-spine01:eth4"]
+    - endpoints: ["p3-leaf04:eth2", "p3-spine01:eth5"]
+    - endpoints: ["p3-leaf05:eth2", "p3-spine01:eth6"]
+    - endpoints: ["p3-leaf06:eth2", "p3-spine01:eth7"]
+    - endpoints: ["p3-leaf07:eth2", "p3-spine01:eth8"]
+    - endpoints: ["p3-leaf08:eth2", "p3-spine01:eth9"]
+    - endpoints: ["p3-leaf09:eth2", "p3-spine01:eth10"]
+    - endpoints: ["p3-leaf10:eth2", "p3-spine01:eth11"]
+    - endpoints: ["p3-leaf11:eth2", "p3-spine01:eth12"]
+    - endpoints: ["p3-leaf12:eth2", "p3-spine01:eth13"]
+    - endpoints: ["p3-leaf13:eth2", "p3-spine01:eth14"]
+    - endpoints: ["p3-leaf14:eth2", "p3-spine01:eth15"]
+    - endpoints: ["p3-leaf15:eth2", "p3-spine01:eth16"]
+    - endpoints: ["p3-leaf00:eth3", "p3-spine02:eth1"]
+    - endpoints: ["p3-leaf01:eth3", "p3-spine02:eth2"]
+    - endpoints: ["p3-leaf02:eth3", "p3-spine02:eth3"]
+    - endpoints: ["p3-leaf03:eth3", "p3-spine02:eth4"]
+    - endpoints: ["p3-leaf04:eth3", "p3-spine02:eth5"]
+    - endpoints: ["p3-leaf05:eth3", "p3-spine02:eth6"]
+    - endpoints: ["p3-leaf06:eth3", "p3-spine02:eth7"]
+    - endpoints: ["p3-leaf07:eth3", "p3-spine02:eth8"]
+    - endpoints: ["p3-leaf08:eth3", "p3-spine02:eth9"]
+    - endpoints: ["p3-leaf09:eth3", "p3-spine02:eth10"]
+    - endpoints: ["p3-leaf10:eth3", "p3-spine02:eth11"]
+    - endpoints: ["p3-leaf11:eth3", "p3-spine02:eth12"]
+    - endpoints: ["p3-leaf12:eth3", "p3-spine02:eth13"]
+    - endpoints: ["p3-leaf13:eth3", "p3-spine02:eth14"]
+    - endpoints: ["p3-leaf14:eth3", "p3-spine02:eth15"]
+    - endpoints: ["p3-leaf15:eth3", "p3-spine02:eth16"]
+    - endpoints: ["p3-leaf00:eth4", "p3-spine03:eth1"]
+    - endpoints: ["p3-leaf01:eth4", "p3-spine03:eth2"]
+    - endpoints: ["p3-leaf02:eth4", "p3-spine03:eth3"]
+    - endpoints: ["p3-leaf03:eth4", "p3-spine03:eth4"]
+    - endpoints: ["p3-leaf04:eth4", "p3-spine03:eth5"]
+    - endpoints: ["p3-leaf05:eth4", "p3-spine03:eth6"]
+    - endpoints: ["p3-leaf06:eth4", "p3-spine03:eth7"]
+    - endpoints: ["p3-leaf07:eth4", "p3-spine03:eth8"]
+    - endpoints: ["p3-leaf08:eth4", "p3-spine03:eth9"]
+    - endpoints: ["p3-leaf09:eth4", "p3-spine03:eth10"]
+    - endpoints: ["p3-leaf10:eth4", "p3-spine03:eth11"]
+    - endpoints: ["p3-leaf11:eth4", "p3-spine03:eth12"]
+    - endpoints: ["p3-leaf12:eth4", "p3-spine03:eth13"]
+    - endpoints: ["p3-leaf13:eth4", "p3-spine03:eth14"]
+    - endpoints: ["p3-leaf14:eth4", "p3-spine03:eth15"]
+    - endpoints: ["p3-leaf15:eth4", "p3-spine03:eth16"]
+    - endpoints: ["p3-leaf00:eth5", "p3-spine04:eth1"]
+    - endpoints: ["p3-leaf01:eth5", "p3-spine04:eth2"]
+    - endpoints: ["p3-leaf02:eth5", "p3-spine04:eth3"]
+    - endpoints: ["p3-leaf03:eth5", "p3-spine04:eth4"]
+    - endpoints: ["p3-leaf04:eth5", "p3-spine04:eth5"]
+    - endpoints: ["p3-leaf05:eth5", "p3-spine04:eth6"]
+    - endpoints: ["p3-leaf06:eth5", "p3-spine04:eth7"]
+    - endpoints: ["p3-leaf07:eth5", "p3-spine04:eth8"]
+    - endpoints: ["p3-leaf08:eth5", "p3-spine04:eth9"]
+    - endpoints: ["p3-leaf09:eth5", "p3-spine04:eth10"]
+    - endpoints: ["p3-leaf10:eth5", "p3-spine04:eth11"]
+    - endpoints: ["p3-leaf11:eth5", "p3-spine04:eth12"]
+    - endpoints: ["p3-leaf12:eth5", "p3-spine04:eth13"]
+    - endpoints: ["p3-leaf13:eth5", "p3-spine04:eth14"]
+    - endpoints: ["p3-leaf14:eth5", "p3-spine04:eth15"]
+    - endpoints: ["p3-leaf15:eth5", "p3-spine04:eth16"]
+    - endpoints: ["p3-leaf00:eth6", "p3-spine05:eth1"]
+    - endpoints: ["p3-leaf01:eth6", "p3-spine05:eth2"]
+    - endpoints: ["p3-leaf02:eth6", "p3-spine05:eth3"]
+    - endpoints: ["p3-leaf03:eth6", "p3-spine05:eth4"]
+    - endpoints: ["p3-leaf04:eth6", "p3-spine05:eth5"]
+    - endpoints: ["p3-leaf05:eth6", "p3-spine05:eth6"]
+    - endpoints: ["p3-leaf06:eth6", "p3-spine05:eth7"]
+    - endpoints: ["p3-leaf07:eth6", "p3-spine05:eth8"]
+    - endpoints: ["p3-leaf08:eth6", "p3-spine05:eth9"]
+    - endpoints: ["p3-leaf09:eth6", "p3-spine05:eth10"]
+    - endpoints: ["p3-leaf10:eth6", "p3-spine05:eth11"]
+    - endpoints: ["p3-leaf11:eth6", "p3-spine05:eth12"]
+    - endpoints: ["p3-leaf12:eth6", "p3-spine05:eth13"]
+    - endpoints: ["p3-leaf13:eth6", "p3-spine05:eth14"]
+    - endpoints: ["p3-leaf14:eth6", "p3-spine05:eth15"]
+    - endpoints: ["p3-leaf15:eth6", "p3-spine05:eth16"]
+    - endpoints: ["p3-leaf00:eth7", "p3-spine06:eth1"]
+    - endpoints: ["p3-leaf01:eth7", "p3-spine06:eth2"]
+    - endpoints: ["p3-leaf02:eth7", "p3-spine06:eth3"]
+    - endpoints: ["p3-leaf03:eth7", "p3-spine06:eth4"]
+    - endpoints: ["p3-leaf04:eth7", "p3-spine06:eth5"]
+    - endpoints: ["p3-leaf05:eth7", "p3-spine06:eth6"]
+    - endpoints: ["p3-leaf06:eth7", "p3-spine06:eth7"]
+    - endpoints: ["p3-leaf07:eth7", "p3-spine06:eth8"]
+    - endpoints: ["p3-leaf08:eth7", "p3-spine06:eth9"]
+    - endpoints: ["p3-leaf09:eth7", "p3-spine06:eth10"]
+    - endpoints: ["p3-leaf10:eth7", "p3-spine06:eth11"]
+    - endpoints: ["p3-leaf11:eth7", "p3-spine06:eth12"]
+    - endpoints: ["p3-leaf12:eth7", "p3-spine06:eth13"]
+    - endpoints: ["p3-leaf13:eth7", "p3-spine06:eth14"]
+    - endpoints: ["p3-leaf14:eth7", "p3-spine06:eth15"]
+    - endpoints: ["p3-leaf15:eth7", "p3-spine06:eth16"]
+    - endpoints: ["p3-leaf00:eth8", "p3-spine07:eth1"]
+    - endpoints: ["p3-leaf01:eth8", "p3-spine07:eth2"]
+    - endpoints: ["p3-leaf02:eth8", "p3-spine07:eth3"]
+    - endpoints: ["p3-leaf03:eth8", "p3-spine07:eth4"]
+    - endpoints: ["p3-leaf04:eth8", "p3-spine07:eth5"]
+    - endpoints: ["p3-leaf05:eth8", "p3-spine07:eth6"]
+    - endpoints: ["p3-leaf06:eth8", "p3-spine07:eth7"]
+    - endpoints: ["p3-leaf07:eth8", "p3-spine07:eth8"]
+    - endpoints: ["p3-leaf08:eth8", "p3-spine07:eth9"]
+    - endpoints: ["p3-leaf09:eth8", "p3-spine07:eth10"]
+    - endpoints: ["p3-leaf10:eth8", "p3-spine07:eth11"]
+    - endpoints: ["p3-leaf11:eth8", "p3-spine07:eth12"]
+    - endpoints: ["p3-leaf12:eth8", "p3-spine07:eth13"]
+    - endpoints: ["p3-leaf13:eth8", "p3-spine07:eth14"]
+    - endpoints: ["p3-leaf14:eth8", "p3-spine07:eth15"]
+    - endpoints: ["p3-leaf15:eth8", "p3-spine07:eth16"]
+    - endpoints: ["p0-leaf00:eth9", "green-host00:eth1"]
+    - endpoints: ["p0-leaf00:eth10", "yellow-host00:eth1"]
+    - endpoints: ["p0-leaf01:eth9", "green-host01:eth1"]
+    - endpoints: ["p0-leaf01:eth10", "yellow-host01:eth1"]
+    - endpoints: ["p0-leaf02:eth9", "green-host02:eth1"]
+    - endpoints: ["p0-leaf02:eth10", "yellow-host02:eth1"]
+    - endpoints: ["p0-leaf03:eth9", "green-host03:eth1"]
+    - endpoints: ["p0-leaf03:eth10", "yellow-host03:eth1"]
+    - endpoints: ["p0-leaf04:eth9", "green-host04:eth1"]
+    - endpoints: ["p0-leaf04:eth10", "yellow-host04:eth1"]
+    - endpoints: ["p0-leaf05:eth9", "green-host05:eth1"]
+    - endpoints: ["p0-leaf05:eth10", "yellow-host05:eth1"]
+    - endpoints: ["p0-leaf06:eth9", "green-host06:eth1"]
+    - endpoints: ["p0-leaf06:eth10", "yellow-host06:eth1"]
+    - endpoints: ["p0-leaf07:eth9", "green-host07:eth1"]
+    - endpoints: ["p0-leaf07:eth10", "yellow-host07:eth1"]
+    - endpoints: ["p0-leaf08:eth9", "green-host08:eth1"]
+    - endpoints: ["p0-leaf08:eth10", "yellow-host08:eth1"]
+    - endpoints: ["p0-leaf09:eth9", "green-host09:eth1"]
+    - endpoints: ["p0-leaf09:eth10", "yellow-host09:eth1"]
+    - endpoints: ["p0-leaf10:eth9", "green-host10:eth1"]
+    - endpoints: ["p0-leaf10:eth10", "yellow-host10:eth1"]
+    - endpoints: ["p0-leaf11:eth9", "green-host11:eth1"]
+    - endpoints: ["p0-leaf11:eth10", "yellow-host11:eth1"]
+    - endpoints: ["p0-leaf12:eth9", "green-host12:eth1"]
+    - endpoints: ["p0-leaf12:eth10", "yellow-host12:eth1"]
+    - endpoints: ["p0-leaf13:eth9", "green-host13:eth1"]
+    - endpoints: ["p0-leaf13:eth10", "yellow-host13:eth1"]
+    - endpoints: ["p0-leaf14:eth9", "green-host14:eth1"]
+    - endpoints: ["p0-leaf14:eth10", "yellow-host14:eth1"]
+    - endpoints: ["p0-leaf15:eth9", "green-host15:eth1"]
+    - endpoints: ["p0-leaf15:eth10", "yellow-host15:eth1"]
+    - endpoints: ["p1-leaf00:eth9", "green-host00:eth2"]
+    - endpoints: ["p1-leaf00:eth10", "yellow-host00:eth2"]
+    - endpoints: ["p1-leaf01:eth9", "green-host01:eth2"]
+    - endpoints: ["p1-leaf01:eth10", "yellow-host01:eth2"]
+    - endpoints: ["p1-leaf02:eth9", "green-host02:eth2"]
+    - endpoints: ["p1-leaf02:eth10", "yellow-host02:eth2"]
+    - endpoints: ["p1-leaf03:eth9", "green-host03:eth2"]
+    - endpoints: ["p1-leaf03:eth10", "yellow-host03:eth2"]
+    - endpoints: ["p1-leaf04:eth9", "green-host04:eth2"]
+    - endpoints: ["p1-leaf04:eth10", "yellow-host04:eth2"]
+    - endpoints: ["p1-leaf05:eth9", "green-host05:eth2"]
+    - endpoints: ["p1-leaf05:eth10", "yellow-host05:eth2"]
+    - endpoints: ["p1-leaf06:eth9", "green-host06:eth2"]
+    - endpoints: ["p1-leaf06:eth10", "yellow-host06:eth2"]
+    - endpoints: ["p1-leaf07:eth9", "green-host07:eth2"]
+    - endpoints: ["p1-leaf07:eth10", "yellow-host07:eth2"]
+    - endpoints: ["p1-leaf08:eth9", "green-host08:eth2"]
+    - endpoints: ["p1-leaf08:eth10", "yellow-host08:eth2"]
+    - endpoints: ["p1-leaf09:eth9", "green-host09:eth2"]
+    - endpoints: ["p1-leaf09:eth10", "yellow-host09:eth2"]
+    - endpoints: ["p1-leaf10:eth9", "green-host10:eth2"]
+    - endpoints: ["p1-leaf10:eth10", "yellow-host10:eth2"]
+    - endpoints: ["p1-leaf11:eth9", "green-host11:eth2"]
+    - endpoints: ["p1-leaf11:eth10", "yellow-host11:eth2"]
+    - endpoints: ["p1-leaf12:eth9", "green-host12:eth2"]
+    - endpoints: ["p1-leaf12:eth10", "yellow-host12:eth2"]
+    - endpoints: ["p1-leaf13:eth9", "green-host13:eth2"]
+    - endpoints: ["p1-leaf13:eth10", "yellow-host13:eth2"]
+    - endpoints: ["p1-leaf14:eth9", "green-host14:eth2"]
+    - endpoints: ["p1-leaf14:eth10", "yellow-host14:eth2"]
+    - endpoints: ["p1-leaf15:eth9", "green-host15:eth2"]
+    - endpoints: ["p1-leaf15:eth10", "yellow-host15:eth2"]
+    - endpoints: ["p2-leaf00:eth9", "green-host00:eth3"]
+    - endpoints: ["p2-leaf00:eth10", "yellow-host00:eth3"]
+    - endpoints: ["p2-leaf01:eth9", "green-host01:eth3"]
+    - endpoints: ["p2-leaf01:eth10", "yellow-host01:eth3"]
+    - endpoints: ["p2-leaf02:eth9", "green-host02:eth3"]
+    - endpoints: ["p2-leaf02:eth10", "yellow-host02:eth3"]
+    - endpoints: ["p2-leaf03:eth9", "green-host03:eth3"]
+    - endpoints: ["p2-leaf03:eth10", "yellow-host03:eth3"]
+    - endpoints: ["p2-leaf04:eth9", "green-host04:eth3"]
+    - endpoints: ["p2-leaf04:eth10", "yellow-host04:eth3"]
+    - endpoints: ["p2-leaf05:eth9", "green-host05:eth3"]
+    - endpoints: ["p2-leaf05:eth10", "yellow-host05:eth3"]
+    - endpoints: ["p2-leaf06:eth9", "green-host06:eth3"]
+    - endpoints: ["p2-leaf06:eth10", "yellow-host06:eth3"]
+    - endpoints: ["p2-leaf07:eth9", "green-host07:eth3"]
+    - endpoints: ["p2-leaf07:eth10", "yellow-host07:eth3"]
+    - endpoints: ["p2-leaf08:eth9", "green-host08:eth3"]
+    - endpoints: ["p2-leaf08:eth10", "yellow-host08:eth3"]
+    - endpoints: ["p2-leaf09:eth9", "green-host09:eth3"]
+    - endpoints: ["p2-leaf09:eth10", "yellow-host09:eth3"]
+    - endpoints: ["p2-leaf10:eth9", "green-host10:eth3"]
+    - endpoints: ["p2-leaf10:eth10", "yellow-host10:eth3"]
+    - endpoints: ["p2-leaf11:eth9", "green-host11:eth3"]
+    - endpoints: ["p2-leaf11:eth10", "yellow-host11:eth3"]
+    - endpoints: ["p2-leaf12:eth9", "green-host12:eth3"]
+    - endpoints: ["p2-leaf12:eth10", "yellow-host12:eth3"]
+    - endpoints: ["p2-leaf13:eth9", "green-host13:eth3"]
+    - endpoints: ["p2-leaf13:eth10", "yellow-host13:eth3"]
+    - endpoints: ["p2-leaf14:eth9", "green-host14:eth3"]
+    - endpoints: ["p2-leaf14:eth10", "yellow-host14:eth3"]
+    - endpoints: ["p2-leaf15:eth9", "green-host15:eth3"]
+    - endpoints: ["p2-leaf15:eth10", "yellow-host15:eth3"]
+    - endpoints: ["p3-leaf00:eth9", "green-host00:eth4"]
+    - endpoints: ["p3-leaf00:eth10", "yellow-host00:eth4"]
+    - endpoints: ["p3-leaf01:eth9", "green-host01:eth4"]
+    - endpoints: ["p3-leaf01:eth10", "yellow-host01:eth4"]
+    - endpoints: ["p3-leaf02:eth9", "green-host02:eth4"]
+    - endpoints: ["p3-leaf02:eth10", "yellow-host02:eth4"]
+    - endpoints: ["p3-leaf03:eth9", "green-host03:eth4"]
+    - endpoints: ["p3-leaf03:eth10", "yellow-host03:eth4"]
+    - endpoints: ["p3-leaf04:eth9", "green-host04:eth4"]
+    - endpoints: ["p3-leaf04:eth10", "yellow-host04:eth4"]
+    - endpoints: ["p3-leaf05:eth9", "green-host05:eth4"]
+    - endpoints: ["p3-leaf05:eth10", "yellow-host05:eth4"]
+    - endpoints: ["p3-leaf06:eth9", "green-host06:eth4"]
+    - endpoints: ["p3-leaf06:eth10", "yellow-host06:eth4"]
+    - endpoints: ["p3-leaf07:eth9", "green-host07:eth4"]
+    - endpoints: ["p3-leaf07:eth10", "yellow-host07:eth4"]
+    - endpoints: ["p3-leaf08:eth9", "green-host08:eth4"]
+    - endpoints: ["p3-leaf08:eth10", "yellow-host08:eth4"]
+    - endpoints: ["p3-leaf09:eth9", "green-host09:eth4"]
+    - endpoints: ["p3-leaf09:eth10", "yellow-host09:eth4"]
+    - endpoints: ["p3-leaf10:eth9", "green-host10:eth4"]
+    - endpoints: ["p3-leaf10:eth10", "yellow-host10:eth4"]
+    - endpoints: ["p3-leaf11:eth9", "green-host11:eth4"]
+    - endpoints: ["p3-leaf11:eth10", "yellow-host11:eth4"]
+    - endpoints: ["p3-leaf12:eth9", "green-host12:eth4"]
+    - endpoints: ["p3-leaf12:eth10", "yellow-host12:eth4"]
+    - endpoints: ["p3-leaf13:eth9", "green-host13:eth4"]
+    - endpoints: ["p3-leaf13:eth10", "yellow-host13:eth4"]
+    - endpoints: ["p3-leaf14:eth9", "green-host14:eth4"]
+    - endpoints: ["p3-leaf14:eth10", "yellow-host14:eth4"]
+    - endpoints: ["p3-leaf15:eth9", "green-host15:eth4"]
+    - endpoints: ["p3-leaf15:eth10", "yellow-host15:eth4"]

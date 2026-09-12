@@ -1,0 +1,36 @@
+# yellow-mrc-baseline.yaml — clean fabric, health_aware_mrc spray,
+# yellow tenant.
+#
+# Yellow counterpart to green-mrc-baseline.yaml. Same MRC-on-clean-fabric
+# sanity check, on the yellow data path. Post-Phase-1a, the yellow inner
+# anycast (cccc:<NN>::2) and host-side seg6local End.DT6 decap together
+# mean inner packets are delivered to the host loopback rather than to
+# the per-plane NIC; this scenario is the lab path that exercises that
+# decap geometry under MRC.
+#
+# Run:
+#   make scenario SCEN=yellow-mrc-baseline
+
+name: yellow-mrc-baseline
+description: |
+  All 4 planes healthy, health_aware_mrc spray over 4 yellow leaf pairs.
+  Yellow data path uses inner anycast cccc:<NN>::2 + host-side End.DT6
+  decap onto lo. Sanity check that enabling MRC is a no-op on a clean
+  fabric for the yellow tenant, and that the collapsed
+  rx socket sees probes arriving via the host-side decap.
+
+flows:
+  - pairs: yellow-pairs
+    policy: health_aware_mrc
+    rate: 500pps
+    duration: 5s
+
+faults: []
+
+# Enable MRC with defaults — presence of the block (even empty) is what
+# flips the orchestrator to pass --mrc on receivers and to set
+# SRV6_MRC_CONFIG_JSON on senders.
+mrc: {}
+
+report:
+  out: results/yellow-mrc-baseline.json

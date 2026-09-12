@@ -1,0 +1,50 @@
+# yellow-ev-spray.yaml — full EV fan-out test for yellow tenant
+#
+# Purpose: Test per-packet outer-DA rotation across all spines (full EV grid)
+#
+# Policy: ev_spray (rotates BOTH plane and spine per packet)
+# EVs used: 16 (4 planes × 4 spines)
+#
+# This is the yellow counterpart to green-ev-spray.yaml. Key differences
+# from yellow-baseline:
+#   - Uses all 16 EVs instead of just 4
+#   - Tests that per-packet spine rotation works correctly
+#   - Validates runner rebuilds outer SID list on every packet
+#   - Regression check: yellow's extra `e009` hop survives per-packet rotation
+#
+# Yellow tenant specifics:
+#   - Outer SID list has TWO variable hextets: `f<S>` (spine) + `e009` (host hop)
+#   - Each packet's `f<S>` rotates (0→1→2→3), `e009` stays constant
+#   - More complex wire format than green (which only has one variable hextet)
+#
+# Use this scenario to:
+#   - Validate full EV data-path works on yellow tenant
+#   - Test per-packet SID list rebuild logic
+#   - Verify outer DA construction for yellow's extra hop
+#
+# What to look for:
+#   - per_plane_sent: balanced across 4 planes (~25% each)
+#   - per_ev_sent: balanced across all 16 (plane, spine) pairs (~6.25% each)
+#   - On wire: outer DA's `f<S>` hextet rotates packet-by-packet
+#
+# Policy: ev_spray (rotates BOTH plane and spine per packet), but does not include MRC probes)
+# A fault during ev_spray will not be detected (no MRC probes), resulting in packet loss
+# over one or more EVs
+name: yellow-ev-spray
+description: |
+  Yellow tenant EV-spray over 4 spines * 4 planes (16 EVs per pair).
+  Validates that yellow's extra leaf->host hop (`e009`) survives
+  per-packet outer-SID rotation. Companion to green-ev-spray.yaml.
+
+paths_per_plane: 4
+
+flows:
+  - pairs: yellow-pairs
+    policy: ev_spray
+    rate: 500pps
+    duration: 5s
+
+faults: []
+
+report:
+  out: results/yellow-ev-spray.json

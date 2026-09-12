@@ -1,0 +1,42 @@
+# green-baseline.yaml — MRC smoke test with clean fabric
+#
+# This is the green tenant MRC sanity check. All 4 planes are healthy, so:
+#   - All EVs should stay in GOOD state
+#   - Traffic should distribute evenly across 4 planes (~25% each)
+#   - Probes should show 0% loss and healthy RTT
+#   - Behavior should match round_robin (since all planes are equally healthy)
+#
+# Green tenant specifics:
+#   - Leaf-decap via `End.DT6` into `Vrf-green`
+#   - Inner dst is anycast `2001:db8:bbbb:<NN>::2` on all 4 NICs
+#   - Simpler SID list than yellow (no extra host hop)
+#
+# What to look for:
+#   - per_plane_sent: balanced (~25% each)
+#   - All EVs in GOOD state (check MRC snapshot)
+#   - 0% loss, healthy probe RTT
+#
+# Compare to:
+#   - green-ev-spray: tests full 16-EV fan-out without MRC
+#   - green-mrc-ev-spray: tests MRC with full 16-EV fan-out
+#   - yellow-baseline: same test pattern but for yellow tenant (no MRC)
+name: green-baseline
+description: |
+  All 4 planes healthy, EV spray over 4 green leaf pairs.
+
+flows:
+  - pairs: green-pairs
+    policy: round_robin
+    rate: 500pps
+    duration: 5s
+
+faults: []
+
+# Enable MRC with defaults. The empty block is meaningful: its presence
+# is what flips the orchestrator to pass --mrc on the receivers and to
+# set SRV6_MRC_CONFIG_JSON on the senders. Override individual knobs
+# here if a scenario needs faster/slower probing.
+mrc: {}
+
+report:
+  out: results/green-baseline.json

@@ -1,0 +1,27 @@
+# yellow-allreduce-ring.yaml — NCCL-style ring all-reduce (2p-4x8)
+#
+# Yellow counterpart to green-allreduce-ring. Each host sends to its
+# right neighbor in a ring: 8 hosts = 8 concurrent flows.
+#
+# Run:
+#   make TOPO=2p-4x8 scenario SCEN=yellow-allreduce-ring
+name: yellow-allreduce-ring
+description: |
+  NCCL-style ring all-reduce (yellow tenant) on the 2p-4x8 topology:
+  8 hosts, 8 concurrent flows, each host sending to its right neighbor
+  at 100 pps.
+
+paths_per_plane: 4
+
+flows:
+  - pairs: yellow-ring
+    policy: health_aware_mrc
+    rate: 100pps
+    duration: 30s
+
+faults: []
+
+mrc: {}
+
+report:
+  out: results/yellow-allreduce-ring.json

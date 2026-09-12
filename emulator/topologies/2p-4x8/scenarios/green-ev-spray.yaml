@@ -1,0 +1,33 @@
+# green-ev-spray.yaml — full EV fan-out test without MRC probes (2p-4x8)
+#
+# Policy: ev_spray (rotates BOTH plane and spine per packet)
+# EVs used: 8 (2 planes × 4 spines)
+# MRC enabled: no (pure data-path test)
+#
+# Validates per-packet outer-DA rotation across all 8 EVs. No fault
+# detection — a broken path silently drops packets.
+#
+# What to look for:
+#   - per_plane_sent: balanced across 2 planes (~50% each)
+#   - per_ev_sent: balanced across all 8 EVs (~12.5% each)
+#
+# Run:
+#   make TOPO=2p-4x8 scenario SCEN=green-ev-spray
+name: green-ev-spray
+description: |
+  EV-spray across 4 spines × 2 planes (8 EVs per pair). Validates the
+  data-path's per-packet outer-DA rotation on the 2p-4x8 topology.
+  No faults, no MRC probes — pure data-path baseline.
+
+paths_per_plane: 4
+
+flows:
+  - pairs: green-pairs
+    policy: ev_spray
+    rate: 500pps
+    duration: 5s
+
+faults: []
+
+report:
+  out: results/green-ev-spray.json

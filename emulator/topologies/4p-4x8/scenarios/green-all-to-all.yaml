@@ -1,0 +1,34 @@
+# green-all-to-all.yaml — green tenant all-to-all collective.
+#
+# Green counterpart of yellow-all-to-all.yaml. Same 56-flow collective
+# pattern but on green's simpler one-uSID outer (leaf-decap End.DT6)
+# data path.
+#
+# What to look for: identical to yellow-all-to-all.yaml.
+#
+# Run:
+#   make scenario SCEN=green-all-to-all
+
+name: green-all-to-all
+description: |
+  Green tenant all-to-all collective: 8 hosts, 56 ordered flows (8*7)
+  running concurrently at 10 pps each. Companion to yellow-all-to-all
+  on the simpler green leaf-decap data path.
+
+paths_per_plane: 4
+
+flows:
+  - pairs: green-all-to-all
+    policy: health_aware_mrc
+    rate: 10pps
+    duration: 30s
+
+faults: []
+
+mrc: 
+  probe_interval_ms: 500          
+  loss_threshold: 0.25
+  loss_demote_consecutive: 3
+
+report:
+  out: results/green-all-to-all.json

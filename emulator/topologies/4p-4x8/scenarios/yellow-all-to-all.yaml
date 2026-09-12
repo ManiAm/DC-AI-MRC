@@ -1,0 +1,69 @@
+# yellow-all-to-all.yaml — yellow tenant all-to-all collective.
+#
+# Emulates an AI all-to-all collective communication pattern: every host
+# in the tenant sends a flow to every other host, all running
+# concurrently. With 8 hosts that's 8*7 = 56 unidirectional flows,
+# every host both sending 7 streams and receiving 7 streams.
+#
+# What to look for:
+#   - per_plane_sent: very balanced; the 16 EVs per pair * 56 pairs
+#     gives good entropy across the fabric, so plane skew should be
+#     well under 5%.
+#   - per receiver: 7 concurrent senders converging on one leaf's
+#     downlink. This is the "incast" condition real all-to-all workloads
+#     hit; queue tension and small loss bursts are expected at higher
+#     rates.
+#   - With MRC enabled (health_aware_mrc): a single port shutdown
+#     anywhere should affect ~7-14 of the 56 flows (every flow that
+#     passes through that (plane, spine) cell). Each of those flows
+#     should independently rebalance away from the broken EV.
+#
+# Failure injection: use srctl fault commands —
+#   `srctl fault shutdown p<P>-spine<S> sEthernet<port>`
+# breaks EV (plane=P, path=S) for every flow that hashes through it.
+#
+# Run:
+#   make scenario SCEN=yellow-all-to-all
+
+name: yellow-all-to-all
+description: |
+  Yellow tenant all-to-all collective: 8 hosts, 56 ordered flows (8*7)
+  running concurrently at 10 pps each. Emulates the most fabric-stressful
+  AI collective pattern; every host both sends 7 streams and receives
+  7 streams (incast at every leaf downlink).
+
+paths_per_plane: 4
+
+flows:
+  - pairs: yellow-all-to-all
+    #policy: ev_spray
+    policy: health_aware_mrc
+    rate: 10pps
+    duration: 30s
+
+faults: []
+
+# probe_timeout_ms bumped from the default 100ms to 300ms specifically
+# for all-to-all because at larger scale the agent's reply RX loop
+# (one Python thread under the GIL, processing both probe replies AND
+# loss reports for high fan-in) may not keep up with the default
+# timeout. Replies arrive at the kernel socket on time but the user-
+# space loop can be slow enough that the parallel sweep thread (cadence =
+# probe_interval_ms = 500ms) marks consecutive probes as timed-out
+# before the RX loop drains them, demoting the EV to assumed_bad.
+#
+# 300ms is a safety margin (3x the default) that should comfortably
+# cover RX-loop latency while still detecting real failed paths within
+# 3*300ms = 900ms (close to the kernel-level neighbor-discovery scale,
+# which is the limit of what we can resolve over docker-sonic-vs
+# anyway). The `mrc.probe_clock.stale_replies` counter in the JSON
+# report is the canary: if it's non-zero we still have RX falling
+# behind sweep and a deeper agent-side fix (lazy-on-emit timeout
+# checks, or batched RX with non-blocking drain) is needed.
+mrc:
+  probe_timeout_ms: 300
+  probe_interval_ms: 500        
+  loss_threshold: 0.25
+  loss_demote_consecutive: 3
+report:
+  out: results/yellow-all-to-all.json

@@ -1,0 +1,37 @@
+# yellow-baseline.yaml — minimal smoke test for yellow tenant
+#
+# Purpose: Quick sanity check that yellow tenant works correctly
+#
+# Policy: round_robin (rotates across 4 planes only, one spine per plane)
+# EVs used: 4 (one per plane)
+# Paths per plane: 1 (default)
+#
+# Yellow exercises a different data path than green:
+#   - Decap happens on the destination *host* via per-NIC `seg6local End.DT6`
+#   - Outer SID list has one extra hop (`e009` leaf→host) compared to green
+#   - Inner dst is anycast `2001:db8:cccc:<NN>::2` on all 4 NICs + lo
+#
+# Use this scenario to:
+#   - Verify yellow tenant basic functionality (host-side End.DT6 decap works)
+#   - Quick regression test after fabric/routing changes
+#   - Validate yellow wire format is correct
+#
+# Expected: near-zero loss, balanced per-plane counts (each ~25%)
+name: yellow-baseline
+description: |
+  All 4 planes healthy, round-robin spray over the well-known yellow
+  leaf pairs (auto-sized: 4 pairs on 4p-4x8), yellow tenant (host-side
+  seg6local End.DT6 decap). Sanity check that the fabric, sprayer,
+  receiver, and per-NIC End.DT6 policies all agree on the yellow wire
+  format.
+
+flows:
+  - pairs: yellow-pairs
+    policy: round_robin
+    rate: 500pps
+    duration: 5s
+
+faults: []
+
+report:
+  out: results/yellow-baseline.json

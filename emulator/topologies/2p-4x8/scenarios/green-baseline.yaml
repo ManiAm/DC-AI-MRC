@@ -1,0 +1,28 @@
+# green-baseline.yaml — MRC smoke test with clean fabric (2p-4x8)
+#
+# Green tenant sanity check on the 2-plane topology. Both planes are
+# healthy, so:
+#   - All EVs should stay in GOOD state
+#   - Traffic should distribute evenly across 2 planes (~50% each)
+#   - Probes should show 0% loss and healthy RTT
+#
+# Run:
+#   make TOPO=2p-4x8 scenario SCEN=green-baseline
+name: green-baseline
+description: |
+  Both planes healthy, round-robin spray over 4 green leaf pairs
+  on the 2p-4x8 topology. Sanity check that the fabric, sprayer,
+  and receiver agree on the green wire format.
+
+flows:
+  - pairs: green-pairs
+    policy: round_robin
+    rate: 500pps
+    duration: 5s
+
+faults: []
+
+mrc: {}
+
+report:
+  out: results/green-baseline.json

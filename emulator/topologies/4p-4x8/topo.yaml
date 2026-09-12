@@ -1,0 +1,20 @@
+name: 4p-4x8
+description: 4-plane Clos, 4 spines per plane, 8 leaves per plane (mid-size dev variant)
+planes: 4
+spines_per_plane: 4
+leaves_per_plane: 8
+tenants:
+  - green
+  - yellow
+images:
+  sonic: docker-sonic-vs:latest
+  host: alpine-srv6-scapy:1.0
+clab:
+  topology_name: sonic-docker-4p-4x8
+
+# Optional: deploy live visibility stack (scraper + Prometheus + Grafana).
+# Uncomment to enable. Requires srv6-scraper:1.0 image (make visibility-image).
+# Access Grafana at http://<topology-host>:3000 after deployment.
+# See visibility/README.md and docs/design-visibility.md for details.
+# visibility:
+#   enabled: true

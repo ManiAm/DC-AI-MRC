@@ -1,0 +1,27 @@
+# yellow-mrc-baseline.yaml — clean fabric, health_aware_mrc spray,
+# yellow tenant (2p-4x8)
+#
+# Yellow counterpart to green-mrc-baseline. Same MRC-on-clean-fabric
+# sanity check, on the yellow data path with host-side End.DT6 decap.
+#
+# Run:
+#   make TOPO=2p-4x8 scenario SCEN=yellow-mrc-baseline
+name: yellow-mrc-baseline
+description: |
+  Both planes healthy, health_aware_mrc spray over 4 yellow leaf pairs
+  on the 2p-4x8 topology. Yellow data path uses host-side End.DT6
+  decap. Sanity check that enabling MRC is a no-op on a clean fabric
+  for the yellow tenant.
+
+flows:
+  - pairs: yellow-pairs
+    policy: health_aware_mrc
+    rate: 500pps
+    duration: 5s
+
+faults: []
+
+mrc: {}
+
+report:
+  out: results/yellow-mrc-baseline.json

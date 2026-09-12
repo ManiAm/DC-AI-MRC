@@ -1,0 +1,25 @@
+# full-mesh.yaml — every host talks to every other host of the same tenant.
+#
+# Topology-agnostic: `src: all` and `dst: all` expand to every host id
+# 0..NUM_LEAVES-1 at apply time, so this same file works on every
+# topology size without editing.
+#
+# Use this to validate spray.py across arbitrary host combinations or
+# have everything reachable for ad-hoc pings.
+#
+# Apply with:
+#   ./routes.py apply -f routes/full-mesh.yaml
+apiVersion: srv6-lab/v1
+kind: RouteSet
+metadata:
+  name: full-mesh
+spec:
+  mesh:
+    - tenant: green
+      src: all
+      dst: all
+      # self-pairs (src == dst) are dropped automatically
+      # the reverse pair (a->b vs b->a) is canonicalized and deduped
+    - tenant: yellow
+      src: all
+      dst: all

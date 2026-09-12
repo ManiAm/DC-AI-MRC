@@ -1,0 +1,35 @@
+# green-mrc-ev-spray.yaml — green tenant, health_aware_mrc with full
+# EV fan-out (2 planes × 4 spines = 8 EVs per pair) on 2p-4x8.
+#
+# Full MRC with per-EV health awareness. Best used with fault injection
+# to watch MRC detect and reroute around a broken path.
+#
+# What to look for:
+#   - Pre-failure: uniform ~12.5% per EV
+#   - Post-failure: the broken (plane, path) cell drops to ~0% and the
+#     remaining 7 EVs absorb its share
+#
+# Failure injection:
+#   srctl fault shutdown p<P>-spine<S> Ethernet<port>
+#
+# Run:
+#   make TOPO=2p-4x8 scenario SCEN=green-mrc-ev-spray
+name: green-mrc-ev-spray
+description: |
+  Green tenant health_aware_mrc spray with full per-EV fan-out
+  (8 EVs per pair) on the 2p-4x8 topology.
+
+paths_per_plane: 4
+
+flows:
+  - pairs: green-pairs
+    policy: health_aware_mrc
+    rate: 100pps
+    duration: 30s
+
+faults: []
+
+mrc: {}
+
+report:
+  out: results/green-mrc-ev-spray.json

@@ -1,0 +1,36 @@
+# yellow-mrc-ev-spray.yaml — yellow tenant, health_aware_mrc with full
+# EV fan-out (2 planes × 4 spines = 8 EVs per pair) on 2p-4x8.
+#
+# Full MRC with per-EV health awareness on the yellow data path.
+# Best used with fault injection.
+#
+# What to look for:
+#   - Pre-failure: uniform ~12.5% per EV
+#   - Post-failure: the broken (plane, path) cell drops to ~0% and the
+#     remaining 7 EVs absorb its share
+#
+# Failure injection:
+#   srctl fault shutdown p<P>-spine<S> Ethernet<port>
+#
+# Run:
+#   make TOPO=2p-4x8 scenario SCEN=yellow-mrc-ev-spray
+name: yellow-mrc-ev-spray
+description: |
+  Yellow tenant health_aware_mrc spray with full per-EV fan-out
+  (8 EVs per pair) on the 2p-4x8 topology. Exercises per-EV loss
+  attribution on yellow's host-side End.DT6 decap data path.
+
+paths_per_plane: 4
+
+flows:
+  - pairs: yellow-pairs
+    policy: health_aware_mrc
+    rate: 100pps
+    duration: 30s
+
+faults: []
+
+mrc: {}
+
+report:
+  out: results/yellow-mrc-ev-spray.json

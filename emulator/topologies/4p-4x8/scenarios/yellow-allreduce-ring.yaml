@@ -1,0 +1,63 @@
+# yellow-allreduce-ring.yaml
+#
+# Emulates one step of NCCL's ring all-reduce, the dominant collective
+# pattern in production AI training. Each of the N hosts sends
+# concurrently to its right neighbor:
+#
+#   host00 -> host01
+#   host01 -> host02
+#   ...
+#   host06 -> host07
+#   host07 -> host00      (ring wraps)
+#
+# Real all-reduce is 2(N-1) such steps — reduce-scatter (N-1 steps)
+# followed by all-gather (N-1 steps) — with the "interesting chunk"
+# rotated around the ring each step. The simulator models one step with sustained
+# traffic, which captures the per-link load characteristic without the
+# multi-step orchestration overhead. The SRv6 spraywire pattern is what matters
+# for fabric/MRC behavior; the application-level reduction is opaque.
+#
+# Why this is interesting:
+#   - Every host both sends AND receives concurrently — no idle hosts,
+#     unlike all-to-all where some leaf links carry no traffic at any
+#     given instant.
+#   - Logical adjacency != physical adjacency. host00 and host01 are on
+#     different leaves; the ring traverses the fabric N times, not the
+#     N-1 hops a physical ring would. So MRC has the full EV grid to
+#     spray over for each ring hop.
+#   - Bandwidth-optimal pattern: in real all-reduce, N flows of B bytes
+#     each / N = B bytes per host throughput, independent of N. The
+#     fabric carries N*B bytes total per step.
+#
+# What to look for:
+#   - per_plane_sent: balanced; 8 flows * 16 EVs = 128 EV cells active
+#     across the fabric, good entropy.
+#   - per leaf eth1..eth4: should see roughly 8/8 = 1 flow's worth of
+#     egress + 1 flow's worth of ingress (ring is balanced by design).
+#   - With MRC: a port shutdown affects ~1-2 of the 8 flows (those whose
+#     spine-hash subset includes the broken (plane, spine) cell).
+#
+# Run:
+#   make scenario SCEN=yellow-allreduce-ring
+
+name: yellow-allreduce-ring
+description: |
+  NCCL-style ring all-reduce (yellow tenant): 8 hosts, 8 concurrent
+  flows, each host sending to its right neighbor at 100 pps.
+  Models one step of a bandwidth-optimal ring all-reduce — the dominant
+  pattern in production AI training.
+
+paths_per_plane: 4
+
+flows:
+  - pairs: yellow-ring
+    policy: health_aware_mrc
+    rate: 100pps
+    duration: 30s
+
+faults: []
+
+mrc: {}
+
+report:
+  out: results/yellow-allreduce-ring.json

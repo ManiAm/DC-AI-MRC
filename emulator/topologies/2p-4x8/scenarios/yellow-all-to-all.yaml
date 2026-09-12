@@ -1,0 +1,30 @@
+# yellow-all-to-all.yaml — yellow tenant all-to-all collective (2p-4x8)
+#
+# Every host sends to every other host simultaneously: 8 hosts = 56
+# ordered flows (8×7). Yellow counterpart to green-all-to-all.
+#
+# Run:
+#   make TOPO=2p-4x8 scenario SCEN=yellow-all-to-all
+name: yellow-all-to-all
+description: |
+  Yellow tenant all-to-all collective on the 2p-4x8 topology: 8 hosts,
+  56 ordered flows (8×7) running concurrently at 10 pps each.
+
+paths_per_plane: 4
+
+flows:
+  - pairs: yellow-all-to-all
+    policy: health_aware_mrc
+    rate: 10pps
+    duration: 30s
+
+faults: []
+
+mrc:
+  probe_timeout_ms: 300
+  probe_interval_ms: 500
+  loss_threshold: 0.25
+  loss_demote_consecutive: 3
+
+report:
+  out: results/yellow-all-to-all.json

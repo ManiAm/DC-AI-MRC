@@ -1,0 +1,28 @@
+# green-allreduce-ring.yaml — NCCL-style ring all-reduce (2p-4x8)
+#
+# Each host sends to its right neighbor in a ring: 8 hosts = 8
+# concurrent flows. Models one step of a bandwidth-optimal ring
+# all-reduce.
+#
+# Run:
+#   make TOPO=2p-4x8 scenario SCEN=green-allreduce-ring
+name: green-allreduce-ring
+description: |
+  NCCL-style ring all-reduce (green tenant) on the 2p-4x8 topology:
+  8 hosts, 8 concurrent flows, each host sending to its right neighbor
+  at 100 pps.
+
+paths_per_plane: 4
+
+flows:
+  - pairs: green-ring
+    policy: health_aware_mrc
+    rate: 100pps
+    duration: 30s
+
+faults: []
+
+mrc: {}
+
+report:
+  out: results/green-allreduce-ring.json
